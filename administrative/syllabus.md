@@ -1,15 +1,15 @@
 # Syllabus: Computer Architecture and Assembly Language and Lab
-* Semester: Spring 2022
+* Semester: Fall 2022
 * Professor: [Dr. Steven Fitzgerald](mailto:steve@my.csun.edu)
   * https://github.com/smf-steve
 
 ## General Information
 * Zoom Link:		https://csun.zoom.us/my/smf.steve
 * Slack Link:		https://csun-comp-122.slack.com
-* Slack Channel:	#fitzgerald-f21
+* Slack Channel:	#fitzgerald-f22
 * GitHub Organization:	https://github.com/COMP122
 * Auxillary Documents (on drive.my.csun.edu): https://drive.google.com/drive/u/1/folders/1WpDQTpX-rFnPNkcynDI2-7faFX0qOzjH
-* Office Hours: 		Tuesday @ 1:00-1:45 & Thursday @ 11:00-11:45
+* Office Hours: 		Tuesday @ 11:30-12:15 & Thursday @ 12:00-12:45
 
 ## Class Information: 
 #### COMP122L-03 (16571 /16573)
@@ -32,7 +32,7 @@
 * Meeting Location: http://csun.zoom.us/my/smf.steve
 * Final Exam: None
 
-## [Class Schedule](https://github.com/COMP122/comp122-s22/raw/main/administrative/schedule.pdf) (with tentative dates of quizzes/exams):
+## [Class Schedule](https://docs.google.com/document/d/1uIOXxD7ZS493IKF9qqYf2KeQtfmE0fTXgGXtjZrDoWY) (with tentative dates of quizzes/exams):
   1. Models for Communication and Computation	(Online Quiz #1: 9/18)
   1. Data Formats and Encodings for Computing (In-class Exam #2: 10/17 & 10/18)
   1. Digital Logic: Combinational and Sequential Circuits	(Online Quiz #3: 10/29)
