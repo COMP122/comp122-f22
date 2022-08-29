@@ -18,6 +18,7 @@
        - First Assignment
 
 ## Questions
+ * Recording of Lectures (zoom)
 
 ## Review from Last-time
 
