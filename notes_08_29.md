@@ -30,4 +30,5 @@
 ## Resources
   * Canonical: (Mathematics) relating to a general rule or standard formula.
 
-## Notes
+## Noteshello this is just some stuff
+
