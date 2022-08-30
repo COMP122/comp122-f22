@@ -44,7 +44,7 @@
   1. This class requires you to use numerous tools and online resources.
 
 ## Course Description (from the Catalog):
-Grade of C or better in COMP 110/L; Grade of C or better in MATH 103, 104, 105, 150A or 255A, or a passing score on the Math Placement Test (MPT) that satisfies prerequisites for MATH 150A or 255A; Lower Division writing requirement.
+Grade of C or better   COMP 110/L; Grade of C or better in MATH 103, 104, 105, 150A or 255A, or a passing score on the Math Placement Test (MPT) that satisfies prerequisites for MATH 150A or 255A; Lower Division writing requirement.
 
 Introduction to computer architecture, assembly language programming, system software and computer applications. Number systems and data representation. Internal organization of a computer. Primitive instructions and operations. Assembly language.
 
@@ -71,11 +71,6 @@ The following high-level topics will be reviewed, covered or introduced in class
     * OSI and TCP/IP Communication Models
     * Instruction Set Architectures (CISC versus RISC)
     * Operating Systems and Execution Models
-
-  * Boolean Logic
-    * Combinatorial Circuits
-    * Sequential Circuits
-    * Pipeline Architectures
   
   * Encoding ad Mappings
     * Table Methods: e.g., ASCII, UTF-8, base64
@@ -83,6 +78,12 @@ The following high-level topics will be reviewed, covered or introduced in class
     * Base Conversions
     * Binary Numbering Representations and mathematical operations
     * Floating Point Representation 
+
+  * Boolean Logic
+    * Combinatorial Circuits
+    * Sequential Circuits
+    * Pipeline Architectures
+
 
   * Introduction to Assembly Language
     * Three Address Code and Control Flow
