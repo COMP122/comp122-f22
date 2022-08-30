@@ -32,4 +32,4 @@
   * Attendance Sheet: https://docs.google.com/spreadsheets/d/19JVslVzWfyOyl_OqYFI1V4PuUzn7gd813KFx5Cq61Oo/edit#gid=0
 
 
-## Notes
+
