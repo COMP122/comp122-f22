@@ -1,4 +1,4 @@
-# COMP122 Lecture Notes: August 29, 2022
+# COMP122 Lecture Notes: August 31, 2022
 
 ## Announcements
 
@@ -25,8 +25,29 @@
 
 ---
 # Today's Material
+   * Editors (IDE)
+     1. sublime
+     1. visual studio (IDE)
+     1. jgrasp (IDE)
+     ---
+     1. vim
+
+   * SSH
+      - secure connection to a remote resources
+      - Authentication
+        - something that you know
+        - something about you
+        - something that you have
+
+   * First Assignment
+     - remove the .gitignore file
+       ``git rm .gitignore``
+     - this file was erroneously placed there by me!
+
 
 
 ---
 ## Resources
+  * Attendance Sheet: https://docs.google.com/spreadsheets/d/19JVslVzWfyOyl_OqYFI1V4PuUzn7gd813KFx5Cq61Oo/edit#gid=0
+  
 ## Notes
