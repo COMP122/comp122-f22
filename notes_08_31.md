@@ -29,6 +29,10 @@
      1. sublime
      1. visual studio (IDE)
      1. jgrasp (IDE)
+     1. eclipse (IDE)
+     1. intellij (IDE)
+     1. notepad+ (GUI)
+     1. xcode (IDE)
      ---
      1. vim
 
@@ -49,5 +53,5 @@
 ---
 ## Resources
   * Attendance Sheet: https://docs.google.com/spreadsheets/d/19JVslVzWfyOyl_OqYFI1V4PuUzn7gd813KFx5Cq61Oo/edit#gid=0
-  
+
 ## Notes
