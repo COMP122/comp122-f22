@@ -1,4 +1,4 @@
-# COMP122 Lecture Notes: August 31, 2022
+# COMP122 Lecture Notes: August 31 & September 1, 2022
 
 ## Announcements
 
@@ -12,6 +12,7 @@
    1. Cloning...
    1. Ssh config
    1. flow of git operations
+   1. location of notes
 
 ## Review from Last-time
    1. importance of the CLI (versus GUI)
@@ -22,6 +23,7 @@
    1. general git commands / some CLI commands
    1. missing semester
    1. Encodings and mentioned ASCII
+   1. Hierarchical 
 
 ---
 # Today's Material
@@ -42,6 +44,8 @@
         - something that you know
         - something about you
         - something that you have
+      - SSL: secure socket layer (deprecated)
+      - TLS: transport layer security (also known as SSL)
 
    * First Assignment
      - remove the .gitignore file
