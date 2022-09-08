@@ -40,3 +40,5 @@
   * Models: https://docs.google.com/presentation/d/1xXPc-kVnkzN8jsrAj0sXZ527KAKsFJEKp4ID4cTuP2w/edit#slide=id.p
 
 ## Notes
+   - R Morning: left off at start of Landscape discussion
+   
