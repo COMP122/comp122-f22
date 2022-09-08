@@ -21,7 +21,8 @@
    1. what is the command to go back to the last location
    1. what is the command to go up the tree
    1. Is there an easy way to determine if there is a git repo associated with a location?
-
+   1. how to open a file via the command line
+   1. how to remove a directory
 
 
 ## Review from Last-time
@@ -39,23 +40,3 @@
   * Models: https://docs.google.com/presentation/d/1xXPc-kVnkzN8jsrAj0sXZ527KAKsFJEKp4ID4cTuP2w/edit#slide=id.p
 
 ## Notes
-
-
-
-https://github.com/COMP122/02-math-review-demiancodes
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
