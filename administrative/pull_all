@@ -1,0 +1,43 @@
+#! /bin/bash
+
+# A simple bash script to pull all repos for COMP122
+
+COMP122_HOME=~/Desktop/classes/comp122
+# change the above definition as needed
+
+######################################################
+# The basic algorithm
+#    1. pull the class-material repo
+#    2. pull the mars-mips repo
+#    3. for each assignment in the deliverables directory
+#        * pull the assignment
+# Note that git allows you to _temporarily_ change the 
+#    working directory with the "-C" option
+#    Hence, the following command can be used to pull repository
+#    without first changing your working directory
+#
+#    git -C <path> pull
+######################################################
+
+
+# Placement of Files related to COMP122_HOME
+CLASS_MATERIAL=${COMP122_HOME}/class-material
+MARS_MIPS=${COMP122_HOME}/mars-mips
+DELIVERABLES=${COMP122_HOME}/deliverables
+
+
+# Steps to pull for each repo
+echo "Pulling class-material"
+git -C ${CLASS_MATERIAL} pull
+echo 
+
+echo "Pulling mars-mips"
+git -C ${MARS_MIPS} pull
+echo
+
+for _assignment in ${DELIVERABLES}/*-* ; do
+   echo "Pulling $_assignment"
+   git -C ${_assignment} pull 
+   echo
+done
+
