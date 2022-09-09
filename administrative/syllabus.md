@@ -3,6 +3,11 @@
 * Professor: [Dr. Steven Fitzgerald](mailto:steve@my.csun.edu)
   * https://github.com/smf-steve
 
+## Adding this Class
+  * The CS department maintains a waitlist for this class.
+  * The CS department will provide permission numbers based upon a a defined priority scheme.
+  * I do *NOT* provide permissions numbers.
+
 ## General Information
 * Zoom Link:		https://csun.zoom.us/my/smf.steve
 * Slack Link:		https://csun-comp-122.slack.com
