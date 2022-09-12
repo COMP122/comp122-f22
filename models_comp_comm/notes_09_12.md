@@ -10,6 +10,7 @@
        * perform a comparison
 
 ## Today's Agenda
+   * Tid-bit on Git Branches:  git tag, git checkout
    * Sketch of a process, with I/O functions (sort)
    * Slides on Models of Communication and Computation
 
