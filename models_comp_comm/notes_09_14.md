@@ -5,7 +5,13 @@
      - Due: Sept 20 at 11:59 pm
 
 ## Today's Agenda
+   * What is an array?
    * Slides: The Process
+     - Process
+     - Read System Call
+     - Variables
+     - Memory
+     - Pointers
 
 
 ## Questions
