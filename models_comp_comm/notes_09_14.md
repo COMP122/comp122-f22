@@ -6,6 +6,7 @@
 
 ## Today's Agenda
    * What is an array?
+   * Tid-bit: Shell Variables
    * Slides: The Process
      - Process
      - Read System Call
