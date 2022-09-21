@@ -82,6 +82,13 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
       - Repo: git@github.com:COMP122/checksum.git
       - Prefix: 03-checksum
 
+1. Validation of Setup
+   - Status: Assigned
+   - Invitation URL: NA
+   - Due: Sep 22, 2022, 4:00 PM
+   - Additional Information
+      - See Slack for instructions
+
 ---
 
 <h3 id="models">Models of Computation and Communication (Section 1)</h3>
