@@ -20,7 +20,8 @@
 
 ## Questions
    1. M/W Morning: 
-      - this class is ontop of this. 
+      - this class is ontop of this.
+      - what is difference between Universal Computer and Turing Machine ?
  
 
 ## Review from Last-time
