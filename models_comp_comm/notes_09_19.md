@@ -23,7 +23,7 @@
      * Review of the checksum.s program
 
 ## Questions
-   1. M/W Morning: no questions, everyone is getting a 100% on the quiz
+   1. M/W Morning: no questions, everyone is getting 100% on the quiz
    1. M/W Afternoon:  
       * How to change tags
         - git tag name    # creates the tag
@@ -31,6 +31,10 @@
         - git tag -f name # remove the tag and then add the tag
         - git tag --help
         - git push --tags
+   1. T/R Morning:
+      * Do I have to redo a ``git push --tags`` if I update a tag? yes
+      * Can I remove a commit in git?  Yes, but you _should_ not do this!
+
      
 
 ## Review from Last-time
