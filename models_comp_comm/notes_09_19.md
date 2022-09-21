@@ -1,7 +1,7 @@
 # COMP122 Lecture Notes: September 19 & 20, 2022
 
 ## Announcements
-   * Quiz this weekend.
+  * Quiz this weekend.
      - You take the quiz online
      - The quiz is open notes
      - The quiz will be released at 6:00pm on Friday.
@@ -34,6 +34,9 @@
    1. T/R Morning:
       * Do I have to redo a ``git push --tags`` if I update a tag? yes
       * Can I remove a commit in git?  Yes, but you _should_ not do this!
+   1. T/R Afternoon:
+      * Can you provide more info on lval and rval?
+      * Why is Java not good for systems program?
 
      
 

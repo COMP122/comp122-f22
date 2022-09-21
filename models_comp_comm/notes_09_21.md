@@ -5,7 +5,6 @@
      - You take the quiz online
      - The quiz is open notes
      - The quiz will be released at 6:00pm on Friday.
-     - ~The quiz is due by 12:00am (midnight) on Saturday.~
      - The quiz is due by 12:00am Sunday (aka midnight on Saturday).
      - The quiz should take you now more than one hour to complete
        * but you may take the entire time to complete the quiz
@@ -16,13 +15,12 @@
    * Installation of MARS
      - ~/Desktop/classes/comp122/mars-mips/MARS.md
    * Review of the MARS IDE
-   * Review of the Checksum.s program
-
-
+   * Review of the checksum.s program
 
 
 ## Questions
- 
+   1. M/W Morning: 
+      - this class is ontop of this. 
  
 
 ## Review from Last-time
