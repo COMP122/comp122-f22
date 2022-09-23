@@ -13,12 +13,13 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 <h2 id="quizzes">Quizzes and Exams (Section N)</h2>
 
 1. Quiz 1: Models of Communication and Computation
-   - Status: Release
-   - Invitation URL: https://classroom.github.com/a/QXhgell5
-   - Due: Sunday, September 25 00:00, aka Saturday @ Midnight
+   - Status: 
+   - Invitation URL: 
+   - Due: 
    - Additional Information:
-      - Name: Quiz for Models Section
-      - Prefix: 10-quiz-models
+      - Preparation URL: 
+      - Repo: Comp122/quiz-models
+      - Prefix: 10-models
 
 1. Exam 2: Formats and Encodings
    - Status: 
