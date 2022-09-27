@@ -98,15 +98,15 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 
 1. Name: table-encodings
    - Status: Assigned
-   - Invitation URL:
-   - Due: Sun Oct 2, 2012 @11:59 PM
+   - Invitation URL: https://classroom.github.com/a/SBtxigqy
+   - Due: Friday Sept 28, 2022 @11:59 PM
       - Repo: COMP122/table-encodings
       - Prefix: 21-table-encodings
 
 1. Name: utf8-encoding
-   - Status: 
-   - Invitation URL:
-   - Due: 
+   - Status: Assigned
+   - Invitation URL: https://classroom.github.com/a/dICVuHQv
+   - Due: Monday Oct 3, 2022 @11:59 PM
       - Repo: COMP122/utf8-encoding
       - Prefix: 22-utf-encoding
 

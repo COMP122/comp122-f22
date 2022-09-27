@@ -20,6 +20,9 @@
       1. How to compare differences in files:  diff, diff -y
    1. T/R M: Why 4, 5, or 7 for the TCP/IP model?
       1. left off on utf-8
+   1. T/R A: 
+      1. Am I picky on tags
+      1. How do I put a proces in the background?
 
 
 ## Commands discussed
@@ -37,8 +40,14 @@
        -  8# 50223225
        -  2# 1010 0001 0010 0110 1001 0101
        - 16# A12595
-
-
+   1. 0234, 34, ox56F4E
+   1. 2#1101110110001100110111001110010
+      - 2#  001 101 110 110 001 100 110 111 001 110 010
+      - 8#  15661467162
+      - 015661467162
+      - 2# 0110 1110 1100 0110 0110 1110 0111 0010
+      - 16# 6EC66E72
+      - 0x6EC66E72
 ---
 ## Resources
 ## Notes
