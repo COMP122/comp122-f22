@@ -2,7 +2,7 @@
 
 ## Announcements
    1. Grading for 03-checksum is complete
-   1. Grading for 10-quiz-models is almost complete
+   1. Grading for 10-quiz-models is complete
    1. I'm going to get more picky in my grading...
       - always think automation 
       - i.e., you need to follow the spec and directions
@@ -11,10 +11,18 @@
    1. Start of new section: Formats and Encodings
    1. See Slides:
       1. Intro into Encodings
-      1.  https://docs.google.com/presentation/d/1g4Bk-mnXojlppJe6SrcVEuuedvT7FidbCtW71pbA8mA/edit#slide=id.g10da0d87ab3_1_382
-
+      1. https://docs.google.com/presentation/d/1g4Bk-mnXojlppJe6SrcVEuuedvT7FidbCtW71pbA8mA/edit#slide=id.g10da0d87ab3_1_382
 
 ## Questions
+   1. M/W M: None! Can we get coffee, Monday mornings are hard!
+   1. M/W A:
+      1. Do I really test your code, yes!  Check out "make"
+      1. How to compare differences in files:  diff, diff -y
+
+## Commands introduced
+   - diff
+   - ping
+   - traceroute
 
 
 ## Review from Last-time

@@ -46,7 +46,9 @@
      * Base 10 to Base N
      * Base N to Base 10
      * Decimal Real to Binary Real
+
   1. Floating Point Encoding
   
-  1. Operations on Bits
+  1. Bitwise Operations
+
   1. Base64 Encoding

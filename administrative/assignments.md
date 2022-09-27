@@ -13,7 +13,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 <h2 id="quizzes">Quizzes and Exams (Section N)</h2>
 
 1. Quiz 1: Models of Communication and Computation
-   - Status: Release
+   - Status: Graded
    - Invitation URL: https://classroom.github.com/a/QXhgell5
    - Due: Sunday, September 25 00:00, aka Saturday @ Midnight
    - Additional Information:
@@ -30,7 +30,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
       - Prefix: 20-formats
 
 1. Quiz 3: Digital Logic
-   - Status: Graded
+   - Status: 
    - Invitation URL: 
    - Due: 
    - Additional Information:
@@ -58,7 +58,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
       - Repo: git@github.com:COMP122/comp122-f22.git
   
 1. My First Assignment
-   - Status: Assigned
+   - Status: Graded
    - Invitation URL: 
    - Due: ASAP (09/06/2022 23:59)
    - Additional Information: https://classroom.github.com/a/t6q2XqLi
@@ -66,7 +66,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
       - Prefix: 01-first-assignment
 
 1. Mathematical Review
-   - Status: Assigned (Credit/No Credit)
+   - Status: Graded (Credit/No Credit)
    - Invitation URL: https://classroom.github.com/a/67-hTBzO
    - Due: ASAP (9/06/2022 23:59)
    - Additional Information:
@@ -74,7 +74,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
       - Prefix: 02-math-review
 
 1. Checksum
-   - Status: Assigned
+   - Status: Graded
    - Invitation URL: https://classroom.github.com/a/pE_vToDI
    - Due: Sep 20, 2022, 23:59 PDT
    - Additional Information
@@ -82,7 +82,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
       - Prefix: 03-checksum
 
 1. Validation of Setup
-   - Status: Assigned
+   - Status: Graded
    - Invitation URL: NA
    - Due: Sep 22, 2022, 4:00 PM
    - Additional Information
@@ -97,9 +97,9 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 <h3 id="format">Format and Encoding (Section 2)</h3>
 
 1. Name: table-encodings
-   - Status: 
+   - Status: Assigned
    - Invitation URL:
-   - Due: 
+   - Due: Sun Oct 2, 2012 @11:59 PM
       - Repo: COMP122/table-encodings
       - Prefix: 21-table-encodings
 
