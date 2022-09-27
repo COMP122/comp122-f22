@@ -18,8 +18,11 @@
    1. M/W A:
       1. Do I really test your code, yes!  Check out "make"
       1. How to compare differences in files:  diff, diff -y
+   1. T/R M: Why 4, 5, or 7 for the TCP/IP model?
+      1. left off on utf-8
 
-## Commands introduced
+
+## Commands discussed
    - diff
    - ping
    - traceroute
@@ -29,6 +32,11 @@
 
 ---
 # Today's Material
+   1.  2#101000010010011010010101
+       -  2# 101 000 010 010 011 010 010 101
+       -  8# 50223225
+       -  2# 1010 0001 0010 0110 1001 0101
+       - 16# A12595
 
 
 ---
