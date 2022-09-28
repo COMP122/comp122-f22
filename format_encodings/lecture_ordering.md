@@ -16,7 +16,6 @@
      * ASCII in Detail
      * Variable Length Encodings:  UTF-8
   
-  
   1. Introduction to Numbering Systems
      * Number Representations
      * Computer Limitations
