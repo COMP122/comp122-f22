@@ -1,6 +1,7 @@
 # COMP122 Lecture Notes: September 26 & 27, 2022
 
 ## Announcements
+   1. Question: are you using the Slack "fat" client?
    1. Assignments Released
       - 21-table-encodings: Due Friday
       - 22-utf-encoding: Due Monday
@@ -9,12 +10,12 @@
       - background processes
 
 ## Today's Agenda
-   1. Review outstanding quesionts
+   1. Review outstanding questions
    1. Practicum
       - Table Encodings
-      - UTF-8 Encoding
+      - UTF-8 Encodings
    1. Intro into Numbering Systems
-   
+
 
 ## Questions
    1. M/W M: 
