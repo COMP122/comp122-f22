@@ -16,36 +16,28 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Status: Graded
    - Invitation URL: https://classroom.github.com/a/QXhgell5
    - Due: Sunday, September 25 00:00, aka Saturday @ Midnight
-   - Additional Information:
-      - Name: Quiz for Models Section
-      - Prefix: 10-quiz-models
+   - Repo Prefix: 10-quiz-models
 
 1. Exam 2: Formats and Encodings
    - Status: 
    - Invitation URL:
    - Due:  -- at the end of lecture/lab
    - Additional Information:
-      - Preparation URL: 
-      - Repo: COMP122/exam-formats
-      - Prefix: 20-formats
+   - Repo Prefix: 20-formats
 
 1. Quiz 3: Digital Logic
    - Status: 
    - Invitation URL: 
    - Due: 
    - Additional Information:
-      - Preparation URL: 
-      - Repo: Comp122/quiz-digital-logic
-      - Prefix: 30-quiz-digital-logic
+   - Repo Prefix: 30-quiz-digital-logic
 
 1. Exam #4: MIPS Assembly Language
    - Status:
    - Invitation URL: 
    - Due: -- at the end of lecture/lab
    - Additional Information:
-      - Preparation URL:
-      - Repo: COMP122/exam-mips
-      - Prefix: 40-exam-mips
+   - Repo Prefix: 40-exam-mips
 
 ---
 <h2 id="general">General Assignments (Section 0)</h2>
@@ -54,32 +46,25 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Status: Assigned, not a graded assignment
    - ~Invitation~ URL: https://github.com/COMP122/comp122-f22
    - Due: ASAP (08/29/2022 23:59)
-   - Additional Information:
-      - Repo: git@github.com:COMP122/comp122-f22.git
   
 1. My First Assignment
    - Status: Graded
-   - Invitation URL: 
+   - Invitation URL: https://classroom.github.com/a/t6q2XqLi
    - Due: ASAP (09/06/2022 23:59)
-   - Additional Information: https://classroom.github.com/a/t6q2XqLi
-      - Repo: git@github.com:COMP122/first-assignment.git
-      - Prefix: 01-first-assignment
+   - Repo Prefix: 01-first-assignment
 
 1. Mathematical Review
    - Status: Graded (Credit/No Credit)
    - Invitation URL: https://classroom.github.com/a/67-hTBzO
    - Due: ASAP (9/06/2022 23:59)
    - Additional Information:
-      - Repo: git@github.com:COMP122/math-review.git
-      - Prefix: 02-math-review
+   - Repo Prefix: 02-math-review
 
 1. Checksum
    - Status: Graded
    - Invitation URL: https://classroom.github.com/a/pE_vToDI
    - Due: Sep 20, 2022, 23:59 PDT
-   - Additional Information
-      - Repo: git@github.com:COMP122/checksum.git
-      - Prefix: 03-checksum
+   - Repo Prefix: 03-checksum
 
 1. Validation of Setup
    - Status: Graded
@@ -100,36 +85,31 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Status: Assigned
    - Invitation URL: https://classroom.github.com/a/SBtxigqy
    - Due: Friday Sept 30, 2022 @11:59 PM
-      - Repo: COMP122/table-encodings
-      - Prefix: 21-table-encodings
+   - Repo Prefix: 21-table-encodings
 
 1. Name: utf8-encoding
    - Status: Assigned
    - Invitation URL: https://classroom.github.com/a/dICVuHQv
    - Due: Monday Oct 3, 2022 @11:59 PM
-      - Repo: COMP122/utf8-encoding
-      - Prefix: 22-utf-encoding
+   - Repo Prefix: 22-utf-encoding
 
 1. Name: binary-addition
    - Status: 
    - Invitation URL: 
    - Due: 
-      - Repo: COMP122/binary-addition
-      - Prefix: 23-binary-addition
+   - Repo Prefix: 23-binary-addition
 
 1. Name: floating-point-encoding
    - Status: 
    - Invitation URL: 
    - Due: 
-      - Repo: COMP122/floating-point-encoding
-      - Prefix: 24-floating-point-encoding
+   - Repo Prefix: 24-floating-point-encoding
 
 1. Name: bitwise-operations
    - Status: 
    - Invitation URL: 
    - Due: 
-      - Repo: COMP122/bitwise-operations
-      - Prefix: 25-bitwise-operations
+   - Repo Prefix: 25-bitwise-operations
 
   
 ---
@@ -139,26 +119,21 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Status: Graded
    - Invitation URL: 
    - Due: 
-      - Repo: COMP122/digital-logic
-      - Prefix: 31-digital-logic
+   - Repo Prefix: 31-digital-logic
 
 ---
 <h3 id="mips">MIPS Encoding (Section 4)</h3>
 
-
 1. Name: 
-   - Status: Graded
-   - Invitation URL: 
-   - Due: 
-       - Repo: COMP122/XXXXX.mips
-       - Prefix: 41-XXXXX
+   - Status: Released
+   - Invitation URL: https://classroom.github.com/a/HIzjhCrn
+   - Due:
+   - Repo Prefix: 41-echo
 
 1. Name: 
    - Status: 
-   - Invitation URL: 
-   - Specification: 
-   - Due: 
-       - Repo: COMP122/conversions.mips
-       - Prefix: 42-conversions
+   - Invitation URL:
+   - Due:
+   - Repo Prefix: 
    
  

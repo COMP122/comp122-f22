@@ -23,8 +23,9 @@
    1. M/W A:
       - Nothing!
    1. T/R M: 
-      -
+      - Everyone is asleep!
    1. T/R A: 
+      -
 
 
 ---
@@ -105,6 +106,53 @@
       -  | 1110 xxxx   | 10 xxxxxx | 10 xxxxxx | 
       - 1111 0011 1000 1110
       - 16# F38E
+
+   1. U+2F63   take this Unicode Character and encode into UTF-8
+      - to hex: 0x2F63, 16#  000 2F63
+      - to bin: 2# 0000 0000 0000 0010 1111  0110 0011
+      - most significant digit: 14
+      - via the table: l = 16, b = 3
+        - 2#  0010 1111  0110 0011
+        - 3 | 1110 xxxx   | 10 xxxxxx | 10 xxxxxx |  
+      - chuck the orignial number into 4, 6, 6
+        - 2#  0010 1111  0110 0011
+        - 2#  0010 111101 100011
+      - insert the chuncks
+        - 2#       0010        111101      100011
+        - 3 | 1110 xxxx   | 10 xxxxxx | 10 xxxxxx | 
+        - 3 | 1110 0010   | 10 111101 | 10 100011 | 
+      - merge: 2# 111000101011110110100011
+      - encode into hex
+        - 2# 1110 0010 1011 1101 1010 0011
+        - 16# E2BDA3
+
+   1. binary string to Unicode, assuming it is a valid UTF-8 encoding
+      - 2#  1110 1011 1000 1111 1010 1011
+      - 16# EB8FAB
+      - 8# 7 2 7 0 7 6 5 3
+         - 2#  111 010 111 000 111 110 101 011
+
+      - 2#               | 1110 1011 | 10 001111 | 10 101011 |
+      - 3 byte sequence  | 1110 xxxx | 10 xxxxxx | 10 xxxxxx | 
+      - pull out the date:  1011 001111 101011
+      - 2# 1011 0011 1110 1011
+      - 16# B3EB
+
+
+   1. 32 bits: 0000 0000 1011 1111 0110 1100 1101 1101
+      - assume it is a MIPS instruction
+      - examing the first 6 bits; 000000
+      - R format: 6, 5, 5, 5, 5, 6
+        - 000000 | 00101 | 11111 | 01101 | xxxxx | 011101
+        - op     | rs    | rt    | rd    | sh    | func
+        - rs= $5, $a1
+        - rt= $32, $ra
+        - rd= $13, $t5
+        - sh= ignore (shift amount)
+        - func= undefined
+
+
+
 ---
 ## Resources
    * (Intro into Numbering Systems)[https://docs.google.com/presentation/d/1TstBVluEDyFLD4pkXwVV-dDbA86tGUea1gV1vLL1mXE/edit#slide=id.gf1bcb9d487_0_2357]
