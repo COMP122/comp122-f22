@@ -1,4 +1,4 @@
-# COMP122 Lecture Notes: September 26 & 27, 2022
+# COMP122 Lecture Notes: September 28 & 29, 2022
 
 ## Announcements
    1. Question: are you using the Slack "fat" client?
