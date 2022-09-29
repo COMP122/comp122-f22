@@ -25,7 +25,8 @@
    1. T/R M: 
       - Everyone is asleep!
    1. T/R A: 
-      -
+      - Parity bit!  What is it!
+      - Where would I use traceroute in practice!
 
 
 ---
@@ -150,6 +151,52 @@
         - rd= $13, $t5
         - sh= ignore (shift amount)
         - func= undefined
+
+
+   1. MIPS:
+        - addi $v0, $t1, 5 =>  | xxxxxx | xxxxx | xxxxx |  xxxx xxxx xxxx xxxx |
+        - format                   op      rs       rt         imm
+        - addi => 8 = 00 1000
+        - $v0 == rt => 0 0010
+        - $t1 == rs => 0 1001
+        - 5 == imm  =>  0000 0000 0000 0101
+        - addi $v0, $t1, 5 =>  | xxxxxx | xxxxx | xxxxx | xxxx xxxx xxxx xxxx |
+        -                        001000 | 01001 | 00010 | 0000 0000 0000 0101 |
+        -     2# 0010 0001 0010 0010 0000 0000 0000 0101 
+        - => 16#   21220005            
+
+        -     2# 000 100 001 001 000 100 000 000 000 000 101 
+        -     8# 0411040005
+
+   1. Convert 012436543234 => 0x
+        - 012436543234  => binary
+        - 000 001 010 100 011 110 101 100 011 010 011 100
+        -            0000 0101 0100 0111 1010 1100 0110 1001 1100
+        - => hex ==  0 5 4 7 A C 6 9 C
+          - 0x0547AC69C
+          - 16#0547AC69C
+
+   1. Encoding U+2F24E into UTF-8 (hex)
+      - identify the index: 2F24E
+      - represent the idex as a hex value:  0x2F24E
+      - convert to binary
+      - 2#  0010 1111 0010 0100 1110
+      - most significant bit is in position 18
+        - 21 bits:   0 0010 1111 0010 0100 1110
+        - chunk 3, 6, 6, 6:  000 101111 001001 001110
+        - 4 bits:     | 11110 xxx   | 10 xxxxxx | 10 xxxxxx | 10 xxxxxx |
+        - position:           000        101111      001001      001110
+        - utf-8 (bin)   11110 000     10 101111   10 001001   10 001110
+        - utf-8 (hex) 0xF0AF898E
+            - 1111 0000 1010 1111 1000 1001 1000 1110
+            - F0AF898E
+
+    1. utf-8 ? :  1110 1101  | 10 110110 | 10 101011 |     1101011110011011101
+       - pattern  1110 xxxx  | 10 xxxxxx | 10 xxxxxx | 
+       - extract       1101       110110      101011
+       - constrict:     1101 1101 1010 1011
+       - convert:   16# DDAB
+       - U+DDAB
 
 
 
