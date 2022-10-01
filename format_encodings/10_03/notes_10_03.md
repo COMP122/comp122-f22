@@ -39,7 +39,6 @@ MIPS-122 is just a simplified version of MIPS. Moreover, we provide a set of cor
           - data references: A, B, etc. (name starts with uppercase)
         - `<cond>`:  <, <=, ==, !=, >=, >
   
-     |-------------------------------|---------------------------|
      | TAC Instruction               | MIPS Instruction          |
      |-------------------------------|---------------------------|
      | `nop`                         | `nop`                     |
@@ -54,9 +53,7 @@ MIPS-122 is just a simplified version of MIPS. Moreover, we provide a set of cor
      | `x = (* a)`                   | `lb x, 0(a)`              |
      | `call label`                  | `jal label`               |
      | `return`                      | `jr $ra`                  |
-     |-------------------------------|---------------------------|
-  
-     | `x = (* a)`                   | `lb x, 0(a)`              |
+
   
     1. Data types:
        - integers: 0-255 (0 .. 2^8 -1)
@@ -359,9 +356,9 @@ MIPS-122 is just a simplified version of MIPS. Moreover, we provide a set of cor
        result = sum;
        ```
 
-  1. Depiction of the Array of Integers
+  1. Depiction of an Array of Integers
 
-     ![An an Array of Integers](/integer_array.png)
+     ![An an Array of Integers](./integer_array.png)
 
     * Revised Algorithm to walk an array via a pointer
 
