@@ -1,14 +1,18 @@
 # Concepts for the day:
   1. Introduce MIPS-122 with TAC
+
   1. TAC: simple constant calculation
      - Register Allocation (& Bookkeeping)
      - Providing the Result of a Calculation
+
   1. Providing Inputs 
      - Code transformation
      - Well-known places
+
   1. Creating a Subroutine
      - Introduce Linkage between Subroutines
      - Marshaling 
+
   1. Iteration via a For Loop
      - Multiplication via Successive Addition: Java Implementation
      - Transformation into Process
@@ -247,7 +251,7 @@ MIPS-122 is just a simplified version of MIPS. Moreover, we provide a set of cor
 
      * Problem 7: Our input variables are over written
        - the values of $a0, $a1 are reused
-     * Solution 7: Marshal both your input and output values
+     * Solution 7: De-marshal inputs, Marshal the output
        - That is to say: 
          - allocate a unique register for these values
          - reposition at the start/end of the subroutine
@@ -480,7 +484,7 @@ MIPS-122 is just a simplified version of MIPS. Moreover, we provide a set of cor
 
               # Register Allocation
 
-              # Marshal Inputs
+              # De-marshal Inputs
 
               #################
               # The body
@@ -488,7 +492,7 @@ MIPS-122 is just a simplified version of MIPS. Moreover, we provide a set of cor
 
 
               #################
-              # De-marshal Output
+              # Marshal Output
               move $v0, $<return>
               exiti 0
 
