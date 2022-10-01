@@ -43,8 +43,8 @@ MIPS-122 is just a simplified version of MIPS. Moreover, we provide a set of cor
      | TAC Instruction               | MIPS Instruction          |
      |-------------------------------|---------------------------|
      | `nop`                         | `nop`                     |
-     | `x = [ a | imm ]`             | `li, move`                |
-     | `x = a [+|-] [ b | imm ]`     | `add, sub, addi, subi`    |
+     | `x = [ a \| imm ]`             | `li, move`                |
+     | `x = a [+\|-] [ b \| imm ]`     | `add, sub, addi, subi`    |
      | `x = a * b`                   | `mul`                     |
      | `x = a >> imm`                | `srl`                     |
      | `if  a <cond> b, goto label`  | `b<cond> a, b, label`     |
