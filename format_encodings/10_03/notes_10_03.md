@@ -439,7 +439,7 @@ MIPS-122 is just a simplified version of MIPS. Moreover, we provide a set of cor
      ```
 
   1. Depiction of the argv Data Structure
-     ![The argv Data Structure](/argv.png)
+     ![The argv Data Structure](./argv.png)
 
   1. Processing of argv via TAC
       ```
