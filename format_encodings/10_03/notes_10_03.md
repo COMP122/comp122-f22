@@ -15,7 +15,7 @@
 
   1. Iteration via a For Loop
      - Multiplication via Successive Addition: Java Implementation
-     - Transformation into Process
+     - Transformation Process into:
        - Three Address Code (TAC)
        - MIPS
 
@@ -31,32 +31,32 @@ MIPS-122 is just a simplified version of MIPS. Moreover, we provide a set of cor
 
   * TAC Instructions and corresponding subset MIPS Instructions
   
-     1. Instructions
-        - virtual registers: a, b, etc.  (name starts with a uppercase)
-        - physical registers: $t0, $t1, etc.
-        - memory references
-          - text reference: label
-          - data references: A, B, etc. (name starts with uppercase)
-        - `<cond>`:  <, <=, ==, !=, >=, >
-  
-     | TAC Instruction               | MIPS Instruction          |
-     |-------------------------------|---------------------------|
-     | `nop`                         | `nop`                     |
-     | `x = [ a \| imm ]`             | `li, move`                |
-     | `x = a [+\|-] [ b \| imm ]`     | `add, sub, addi, subi`    |
-     | `x = a * b`                   | `mul`                     |
-     | `x = a >> imm`                | `srl`                     |
-     | `if  a <cond> b, goto label`  | `b<cond> a, b, label`     |
-     | `if! a <cond> b, goto label`  | `b<! cond>, a, b, label`  |
-     | `goto label`                  | `b label`                 |
-     | `x = & A`                     | `la x, A`                 |
-     | `x = (* a)`                   | `lb x, 0(a)`              |
-     | `call label`                  | `jal label`               |
-     | `return`                      | `jr $ra`                  |
+    1. Instructions
+       - virtual registers: a, b, etc.  (name starts with a uppercase)
+       - physical registers: $t0, $t1, etc.
+       - memory references
+         - text reference: label
+         - data references: A, B, etc. (name starts with uppercase)
+       - `<cond>`:  <, <=, ==, !=, >=, >
 
-  
+       | TAC Instruction               | MIPS Instruction          |
+       |-------------------------------|---------------------------|
+       | `nop`                         | `nop`                     |
+       | `x = [ a \| imm ]`            | `li, move`                |
+       | `x = a [+\|-] [ b \| imm ]`   | `add, sub, addi, subi`    |
+       | `x = a * b`                   | `mul`                     |
+       | `x = a >> imm`                | `srl`                     |
+       | `if  a <cond> b, goto label`  | `b<cond> a, b, label`     |
+       | `if! a <cond> b, goto label`  | `b<! cond>, a, b, label`  |
+       | `goto label`                  | `b label`                 |
+       | `x = & A`                     | `la x, A`                 |
+       | `x = (* a)`                   | `lb x, 0(a)`              |
+       | `call label`                  | `jal label`               |
+       | `return`                      | `jr $ra`                  |
+
     1. Data types:
        - integers: 0-255 (0 .. 2^8 -1)
+       - arrays: integers
     1. Registers:  
        - 8 bits wide
        - $t0, $t1, $t2, $t3, then growing as needed
