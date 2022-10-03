@@ -32,8 +32,8 @@
          - Well-known places
 
       1. Creating a Subroutine
-          - Introduce Linkage between Subroutines
-          - Marshaling
+         - Introduce Linkage between Subroutines
+         - Marshaling
 
       1. Iteration via a For Loop
          - Multiplication via Successive Addition: Java Implementation
@@ -110,8 +110,23 @@
 ## Creating a subroutine
   1. Put the first two things together!
 
+
+## Loops
+
+  1. Example:  Multiplication via successive additions
+
+   ```java
+   product = 0;
+   for ( i = 1 ; i <= b ; i ++ ) {
+     product = product + a;
+   }
+   result = product
+   ```
+
   1. Issues:
-     * Problem 6: Multiple return locations:
+     * Problem 6: Need to break down the semantics of the for-loop
+     * Problem 7: Need reduce the number of jumps
+
 
 
 
