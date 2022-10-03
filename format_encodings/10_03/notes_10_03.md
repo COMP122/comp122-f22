@@ -289,7 +289,7 @@ MIPS-122 is just a simplified version of MIPS. Moreover, we provide a set of cor
             i = 0           	          # Initialize Loop
      top:   nop        
  
-            if i < b, goto body           # Perform Boolean Test
+            if i <= b, goto body           # Perform Boolean Test
             goto done
      body:    nop
        
@@ -307,7 +307,7 @@ MIPS-122 is just a simplified version of MIPS. Moreover, we provide a set of cor
      ```
             i = 0           	          # Initialize Loop
      top:   nop        
-            if i >= b, goto done          # Perform Boolean Test
+            if i > b, goto done           # Perform Boolean Test
 
               product = product + a;      # Body of Loop
          
