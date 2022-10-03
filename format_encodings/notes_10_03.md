@@ -8,40 +8,53 @@
 
 ## Today's Agenda
    1. Review outstanding questions
-   1. Practicum
-      - Table Encodings
-      - UTF-8 Encodings
-   1. Intro into Numbering Systems
+
+   1. Goal: Write a MIPS program
+      1. First write each subroutine in a high-level language
+      1. Second, convert to TAC
+      1. Third, covert to MIPS
+      * After Practice, you can collapse steps
+
 
    1. Concepts for the day:
       1. Introduce MIPS-122 with TAC
+         - reduced number of instructions
+         - reduced number of data
+         types
+           * integers
+           * arrays of integers
 
       1. TAC: simple constant calculation
          - Register Allocation (& Bookkeeping)
          - Providing the Result of a Calculation
 
       1. Providing Inputs
-         - Code transformation
          - Well-known places
 
       1. Creating a Subroutine
-         - Introduce Linkage between Subroutines
-         - Marshaling
+          - Introduce Linkage between Subroutines
+          - Marshaling
 
       1. Iteration via a For Loop
          - Multiplication via Successive Addition: Java Implementation
          - Transformation Process into:
            - Three Address Code (TAC)
            - MIPS
-
+---
       1. Accessing an Array
 
       1. Processing of the argv Data Structure
 
 
 ## Questions
-   1. M/W M: 
+   1. M/W M:
+      - Scientific Notation: why in this class?
+      - What is the command to compare files:
+        * git diff file1 [commit_hash]
+        * diff file1 file2
+      - Why the spacing in the UTF-8 answers.md
    1. M/W A:
+      - 
    1. T/R M: 
    1. T/R A: 
 
@@ -93,12 +106,15 @@
      * Problem 4: We don't have a divide operation
      * Problem 5: Where to do we place the inputs?
 
+
 ## Creating a subroutine
   1. Put the first two things together!
 
-  1. Issuse
+  1. Issues:
      * Problem 6: Multiple return locations:
-     * Problem 7: Our input variables are over written
+
+
+
 
 
 
