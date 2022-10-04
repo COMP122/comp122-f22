@@ -10,7 +10,8 @@
    1. Review outstanding questions
 
    1. Goal: Write a MIPS program
-      1. First write each subroutine in a high-level language
+      1. Zero, build a model of what your are doing
+      1. First, write each subroutine in a high-level language
       1. Second, convert to TAC
       1. Third, convert to MIPS
       * After Practice, you can collapse steps
@@ -58,6 +59,7 @@
       - superfluous zeros
       - checksum at layer three, how does it work
    1. T/R A: 
+      - Nothing
 
 
 ---
@@ -99,6 +101,7 @@
   1. TAC -> MIPS
 
   ```
+
   ```
 
 ## Providing Inputs 
@@ -124,16 +127,19 @@
      - int trap_a(int h, int b, int t);
 
   1. Calling a subroutine
-     - x = trap_a( 1, 4+2, 3) + trap_a(3, 5, 2);
+     - 
+     ```
+       x = trap_a( 1, 2, 3)
+       y = trap_a(3, 5, 2);
+       a = x + y
+     ```
 
      1. MIPS code to call: trap_a
      ```
-
      ```
 
      1. MIPS subroutine for trap_a
      ```mips
-   
      ```
 
 
@@ -154,8 +160,7 @@
      * Problem 6: Need to break down the semantics of the for-loop
      * Problem 7: Need reduce the number of jumps
 
-   ```java
-
+   ```TAC
    ```
 
 
