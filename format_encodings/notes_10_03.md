@@ -3,8 +3,8 @@
 ## Announcements
    1. Graded: 21-table-encodings
    1. Assignments:
-      - 22-utf-encoding: Due Monday
-      - 41-echo: Due Sunday night
+      - 22-utf-encoding: Due Monday Oct 4
+      - 41-echo: Due Sunday night Oct 9
 
 ## Today's Agenda
    1. Review outstanding questions
@@ -19,8 +19,7 @@
    1. Concepts for the day:
       1. Introduce MIPS-122 with TAC
          - reduced number of instructions
-         - reduced number of data
-         types
+         - reduced number of data types
            * integers
            * arrays of integers
 
@@ -56,6 +55,8 @@
    1. M/W A:
       - Nothing!
    1. T/R M: 
+      - superfluous zeros
+      - checksum at layer three, how does it work
    1. T/R A: 
 
 
@@ -67,7 +68,7 @@
    * TAC Instructions and corresponding subset MIPS Instructions
 
      1. Instructions
-      - virtual registers: a, b, etc.  (name starts with a uppercase)
+      - virtual registers: a, b, etc.  (name starts with a lowercase)
       - physical registers: $t0, $t1, etc.
       - memory references
         - text reference: label
@@ -96,8 +97,8 @@
      * Problem 2: Where to do we place the results
 
   1. TAC -> MIPS
-  ```
 
+  ```
   ```
 
 ## Providing Inputs 
@@ -123,14 +124,17 @@
      - int trap_a(int h, int b, int t);
 
   1. Calling a subroutine
+     - x = trap_a( 1, 4+2, 3) + trap_a(3, 5, 2);
+
+     1. MIPS code to call: trap_a
      ```
 
      ```
 
-   1. 
-
-
-
+     1. MIPS subroutine for trap_a
+     ```mips
+   
+     ```
 
 
 
@@ -143,7 +147,7 @@
    for ( i = 1 ; i <= b ; i ++ ) {
      product = product + a;
    }
-   result = product
+   result = product;
    ```
 
   1. Issues:
@@ -151,10 +155,12 @@
      * Problem 7: Need reduce the number of jumps
 
    ```java
+
    ```
 
 
-   ```mips 
+   ```mips
+ 
    ```
 
 
