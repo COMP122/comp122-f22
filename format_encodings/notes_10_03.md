@@ -12,7 +12,7 @@
    1. Goal: Write a MIPS program
       1. First write each subroutine in a high-level language
       1. Second, convert to TAC
-      1. Third, covert to MIPS
+      1. Third, convert to MIPS
       * After Practice, you can collapse steps
 
 
@@ -54,7 +54,7 @@
         * diff file1 file2
       - Why the spacing in the UTF-8 answers.md
    1. M/W A:
-      - 
+      - Nothing!
    1. T/R M: 
    1. T/R A: 
 
@@ -85,7 +85,7 @@
       | `if! a <cond> b, goto label`  | `b<! cond>, a, b, label`  |
       | `goto label`                  | `b label`                 |
       | `x = & A`                     | `la x, A`                 |
-      | `x = (* a)`                   | `lb x, 0(a)`              |
+      | `x = (* A)`                   | `lb x, 0(A)`              |
       | `call label`                  | `jal label`               |
       | `return`                      | `jr $ra`                  |
 
@@ -95,6 +95,10 @@
      * Problem 1: Where do I put things?
      * Problem 2: Where to do we place the results
 
+  1. TAC -> MIPS
+  ```
+
+  ```
 
 ## Providing Inputs 
   1. Example
@@ -106,9 +110,28 @@
      * Problem 4: We don't have a divide operation
      * Problem 5: Where to do we place the inputs?
 
+  1. TAC => MIPS
+
+  ```
+  ```
+
 
 ## Creating a subroutine
   1. Put the first two things together!
+
+  1. Prototype:
+     - int trap_a(int h, int b, int t);
+
+  1. Calling a subroutine
+     ```
+
+     ```
+
+   1. 
+
+
+
+
 
 
 ## Loops
@@ -127,8 +150,12 @@
      * Problem 6: Need to break down the semantics of the for-loop
      * Problem 7: Need reduce the number of jumps
 
+   ```java
+   ```
 
 
+   ```mips 
+   ```
 
 
 
