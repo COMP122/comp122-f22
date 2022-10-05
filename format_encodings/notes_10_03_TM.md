@@ -10,8 +10,7 @@
    1. Review outstanding questions
 
    1. Goal: Write a MIPS program
-      1. Zero, build a model of what your are doing
-      1. First, write each subroutine in a high-level language
+      1. First write each subroutine in a high-level language
       1. Second, convert to TAC
       1. Third, convert to MIPS
       * After Practice, you can collapse steps
@@ -59,7 +58,6 @@
       - superfluous zeros
       - checksum at layer three, how does it work
    1. T/R A: 
-      - Nothing
 
 
 ---
@@ -102,6 +100,23 @@
 
   ```
 
+  start:    nop      # x = 1 + (2 * 3) + 4
+
+            # Register allocation
+            # t0: a
+            # t1: b
+            # t2: c
+            # t3: d
+
+            li $t0, 2            # a = 2
+            li $t1, 3            # b = 3
+            mul $t2, $t0 , $t1   # c = a * b
+            addi $t3, $t2, 1     # d = c + 1
+            addi $v0, $t3, 4     # x = d + 4
+
+
+  end:      exit
+
   ```
 
 ## Providing Inputs 
@@ -117,6 +132,37 @@
   1. TAC => MIPS
 
   ```
+  start:    nop            # a = (h * b * t) >> 1
+
+            # Arguments
+            # v0: a
+            # v1: --
+            # a0: h
+            # a1: b
+            # a2: t
+            # a3: --
+
+            # Register allocation
+            # t0: h
+            # t1: b
+            # t2: t
+            # t3: x
+            # t4: y
+
+            # De-marshal my inputs
+            move $t0, $a0
+            move $t1, $a1
+            move $t2, $a2
+
+            mul $t3, $t0, $t1       # x = h * b
+            mul $t4, $t3, $t2       # y = x * t
+            srl $t5, $t4, 1         # a = y >> 1
+
+
+            # Marshal return value
+
+            move $v0, ?
+  end:      exit
   ```
 
 
@@ -127,20 +173,78 @@
      - int trap_a(int h, int b, int t);
 
   1. Calling a subroutine
-     - 
-     ```
-       x = trap_a( 1, 2, 3)
-       y = trap_a(3, 5, 2);
-       a = x + y
+     - x = trap_a( 1, 4+2, 3) + trap_a(3, 5, 2);
+
      ```
 
-     1. MIPS code to call: trap_a
-     ```
+        # Register allocation
+         # t0: 1 
+         # t1: 4+2
+         # t2: 3
+         # t3: 3
+         # t4: 5
+         # t5: 2
+         # t6: trap_a ( 1, 4+2, 3)
+         # t7: trap_a(3, 5, 2)
+         # t8: x
+
+     li $t0, 1
+     li $t1, 4
+     addi $t1, $t1, 2
+     li $t3, 3
+
+     # marshall the arguements
+     move $a0, $t0
+     move $a1, $t1
+     move $a2, $t2
+
+
+     # make the call
+     jal trap_a                    # call trap_a
+
+     # demarshal the return values
+     move $t6, $v0
+
+     # now fill in the rest of the code
+
      ```
 
-     1. MIPS subroutine for trap_a
-     ```mips
-     ```
+   1. MIPS subroutine for trap_a
+   ```mips
+      trap_a:     nop            # int trap_a(int h, int b, int t);
+      
+                  # Arguments
+                  # v0: a
+                  # v1: --
+                  # a0: h
+                  # a1: b
+                  # a2: t
+                  # a3: --
+      
+                  # Register allocation
+                  # t0: h
+                  # t1: b
+                  # t2: t
+                  # t3: x
+                  # t4: y
+      
+                  # De-marshal my inputs
+                  move $t0, $a0
+                  move $t1, $a1
+                  move $t2, $a2
+      
+                  # a = (h * b * t) >> 1
+                  mul $t3, $t0, $t1       # x = h * b
+                  mul $t4, $t3, $t2       # y = x * t
+                  srl $t5, $t4, 1         # a = y >> 1
+      
+      
+                  # Marshal return value
+      
+                  move $v0, $t5
+        end:      jr $ra                  # return
+   ```
+
 
 
 
@@ -153,19 +257,18 @@
    for ( i = 1 ; i <= b ; i ++ ) {
      product = product + a;
    }
-   result = product;
+   result = product
    ```
 
   1. Issues:
      * Problem 6: Need to break down the semantics of the for-loop
      * Problem 7: Need reduce the number of jumps
 
-   ```TAC
+   ```java
    ```
 
 
-   ```mips
- 
+   ```mips 
    ```
 
 
