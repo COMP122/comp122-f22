@@ -17,7 +17,7 @@
 
       1. Introduce MIPS-122 with TAC
          - only two data types:
-           * integers  (note pointers/reference)
+           * integers  (note: address == integers)
            * arrays of integers
 
       1. Bookkeeping
