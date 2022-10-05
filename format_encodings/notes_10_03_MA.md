@@ -1,4 +1,4 @@
-# COMP122 Lecture Notes: October 2 & 3, 2022
+# COMP122 Lecture Notes: October 3 & 4, 2022
 
 ## Announcements
    1. Graded: 21-table-encodings
@@ -85,7 +85,7 @@
       | `if! a <cond> b, goto label`  | `b<! cond>, a, b, label`  |
       | `goto label`                  | `b label`                 |
       | `x = & A`                     | `la x, A`                 |
-      | `x = (* A)`                   | `lb x, 0(A)`              |
+      | `x = (* a)`                   | `lb x, 0(a)`              |
       | `call label`                  | `jal label`               |
       | `return`                      | `jr $ra`                  |
 
