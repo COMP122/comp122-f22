@@ -367,11 +367,11 @@ MIPS-122 is just a simplified version of MIPS. Moreover, we provide a set of cor
        sum = 0;
 
        length = <size of A>;                # Length has to be provided
-       pointer_A = &A;
+       Pointer_A = &A;
 
        i = 0;
        for (; i < length ;) {
-       	 value = (* pointer_A);
+       	 value = (* Pointer_A);
          sum += value;
 
          pointer_A ++;
@@ -386,16 +386,16 @@ MIPS-122 is just a simplified version of MIPS. Moreover, we provide a set of cor
             sum = 0
 
             length = <size of Array> 
-            pointer_A = &A
+            Pointer_A = &A
 
             i = 0           	            
      top:   nop        
    
             if i >= length, goto done        
-              value = (* pointer_A)
+              value = (* Pointer_A)
               sum = sum + 1
              
-              pointer_A = pointer_A + 1
+              Pointer_A = Pointer_A + 1
 
               i = i + 1                      
               goto top
