@@ -2,6 +2,7 @@
 
 ## Announcements
    1. 41-echo: Due Sunday night Oct 9
+   1. Note the notational difference in TAC -> MIPS table
 
 ## Today's Agenda
    1. Review outstanding questions
@@ -35,7 +36,7 @@
 
    1. Echo Program
 
-   
+
 ## Questions
    1. M/W M:
       - 
