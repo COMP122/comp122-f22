@@ -3,6 +3,7 @@
 ## Announcements
    1. 41-echo: Due Sunday night Oct 9
    1. Note the notational difference in TAC -> MIPS table
+   1. "One Markdown.app" ?
 
 ## Today's Agenda
    1. Review outstanding questions
@@ -39,9 +40,9 @@
 
 ## Questions
    1. M/W M:
-      - 
+      - Please go over marshaling and de-marshaling
    1. M/W A:
-      - 
+      - Are there any other registers in MIPS?
    1. T/R M: 
       -
    1. T/R A: 
@@ -65,6 +66,7 @@
   
       | TAC Instruction               | MIPS Instruction          |
       |-------------------------------|---------------------------|
+      | `<null>`                      | `nop`                     |
       | `nop`                         | `nop`                     |
       | `x = [ a \| imm ]`            | `li, move`                |
       | `x = a [+\|-] [ b \| imm ]`   | `add, sub, addi, subi`    |
@@ -78,8 +80,17 @@
       | `call label`                  | `jal label`               |
       | `return`                      | `jr $ra`                  |
       |                               |                           |
-      | `for(; a <cond> b ;)`         | `b<! cond>, a, b, label`  |
-      | `continue label`              | `b label`
+      | `for(; a <cond> b ;)`         | `b<! cond> a, b, label`   |
+      | `continue label`              | `b label`                 |
+
+      | `TAC <cond>` | `MIPS <cond>` |
+      |--------------|---------------|
+      | `<`          | `lt`          | 
+      | `<=`         | `le`          | 
+      | `!=`         | `ne`          | 
+      | `==`         | `eq`          | 
+      | `>=`         | `ge`          | 
+      | `>`          | `gt`          | 
 
 
 ## Loops
@@ -97,7 +108,6 @@
   1. Issues:
      * Problem 6: Need to break down the semantics of the for-loop
      * Problem 7: Need reduce the number of jumps
-
   ```java
          product = 0;
          i = 1; 
@@ -112,16 +122,15 @@
          result = product;
    ```
 
-
    ```TAC
             product = 0;
             i = 1; 
-   top:     if! i <= b , done
+   top:     for (; i <= b ;) 
                product = product + a;
      
                i = i + 1;
 
-               goto top; 
+               continue top; 
    done:    ;
             result = product;
    
@@ -129,9 +138,92 @@
 
 
    1. Accessing an Array
+      * Consider the following Java version
+        ```java
+           sum = 0;
+           for ( i = 0 ; i < A.length ; i ++ ) {
+             sum += A[i];
+           }
+           result = sum;
+        ```
+
+      * A Simplified Java Version
+        ```java
+                  sum = 0;
+
+                  length = A.length;
+                  ref_A = A;
+
+                  i = 0;
+           bob:   for (; i < length ;) {
+                    sum = sum + ref_A[i];
+         
+                    i = i + 1;
+                    continue bob;
+                  }
+           mary:  ;
+                  result = sum;
+        ```
+
+       ```C
+                  sum = 0;
+
+                  length = A.length;
+                  ref_A = &A;
+
+                  i = 0;
+           bob:   for (; i < length ;) {
+                    value = (* ref_A);
+                    sum = sum + value;
+         
+                    ref_A = ref_A + 1;
+                    i = i + 1;
+                    continue bob;
+                  }
+           mary:  ;
+                  result = sum;
+        ```
+
+
+      ```mips
+         # Register allocation
+         # t0: sum
+         # t1: length
+         # t2: ref_A
+         # t3: i
+         # t4: result
+         # t5: value
+         # t6: 
+                              #           sum = 0;
+                              #
+                              #           length = 5;
+              la  $t2, A      #           ref_A = &A;
+                              #
+                              #           i = 0;
+      bob:                    #    bob:   for (; i < length ;) {
+                              #             value = (* ref_A);
+              lb $t5, 0($t2)  #             sum = sum + value;
+                              #  
+                              #             ref_A = ref_A + 1;
+                              #             i = i + 1;
+                              #             continue bob;
+                              #           }
+      mary:                   #    mary:  ;
+                              #           result = sum;
+      ```
+
+
+   1. echo program
+
 
    1. Processing of the argv Data Structure
 
+
+   1. Revised OS Interface:  via macros define in "syscalls.s"
+       - print_d  _reg_   # print a decimal value, value is in _reg_
+       - print_s  _reg_   # print a string, address is in _reg_
+       - print_ci _imm_   # print a char, the value is _imm_
+       - exiti _imm_      # exit with a value, the value is _imm_
 
 
 

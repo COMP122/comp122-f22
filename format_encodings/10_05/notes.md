@@ -119,19 +119,21 @@ MIPS-122 is just a simplified version of MIPS. Moreover, we provide a set of cor
  
      * A Simplified Java Version
        ```java
-       sum = 0;
-
-       length = A.length;
-       ref_A = A;
-
-       i = 0;
-       for (; i < length ;) {
-       	 value = ref_A[i];
-         sum += value;
-
-         i++;
-       }
-       result = sum;
+               sum = 0;
+        
+               length = A.length;
+               ref_A = A;
+        
+               i = 0;
+       top:    for (; i < length ;) {
+                 value = ref_A[i];
+                 sum += value;
+        
+                 i++;
+                 continue top;
+               }
+       done:   ;
+               result = sum;
        ```
 
   1. Depiction of an Array of Integers
@@ -149,7 +151,7 @@ MIPS-122 is just a simplified version of MIPS. Moreover, we provide a set of cor
 
        i = 0;
        for (; i < length ;) {
-       	 value = (* pointer_A);
+         value = (* pointer_A);
          sum += value;
 
          pointer_A ++;
@@ -245,7 +247,7 @@ MIPS-122 is just a simplified version of MIPS. Moreover, we provide a set of cor
 
    1. Process of arv in MIPS
       - This is your assignment!
-      ```
+      ```mips
               .data
               .text
               .globl main
