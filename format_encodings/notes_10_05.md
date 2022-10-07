@@ -44,9 +44,10 @@
    1. M/W A:
       - Are there any other registers in MIPS?
    1. T/R M: 
-      -
+      - echo.s: and the starter code
+      - when to use the cli and the gui/debugger?
    1. T/R A: 
-      - 
+      - The purpose of the 'jr' command and the '$ra' register
 
 
 ---
@@ -100,7 +101,7 @@
    ```java
    product = 0;
    for ( i = 1 ; i <= b ; i ++ ) {
-     product = product + a;
+     product = product + a; 
    }
    result = product;
    ```
@@ -108,47 +109,39 @@
   1. Issues:
      * Problem 6: Need to break down the semantics of the for-loop
      * Problem 7: Need reduce the number of jumps
-  ```java
-         product = 0;
-         i = 1; 
-   top:  for (; i <= b ;) {          
-           product = product + a;
-
-           i ++;
-
-           continue top;
-         }
-   done: ;
-         result = product;
-   ```
-
-   ```TAC
+     ```java
             product = 0;
-            i = 1; 
-   top:     for (; i <= b ;) 
-               product = product + a;
-     
-               i = i + 1;
-
-               continue top; 
-   done:    ;
+            i = 1;
+     bob:   for (; i <= b ;) {
+              product = product + a; 
+       
+              i = i + 1;
+              continue bob;
+            }
+     mary:  ;
             result = product;
-   
-   ```
+     ```
 
+    * Create a subroutine:
+      1. prototype:  int multiplication(int a, int b);
+   
 
    1. Accessing an Array
       * Consider the following Java version
         ```java
-           sum = 0;
-           for ( i = 0 ; i < A.length ; i ++ ) {
-             sum += A[i];
-           }
-           result = sum;
+        sum = 0;
+        for ( i = 0 ; i < A.length ; i ++ ) {
+          sum += A[i];
+        }
+        result = sum;
         ```
 
+
       * A Simplified Java Version
- 
+        ```C
+        ```
+        ```mips
+        ```
 
    1. echo program
 
