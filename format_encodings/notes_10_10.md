@@ -5,8 +5,8 @@
       1. Two week assignment
       1. Five parts:
          - 2 parts in Java, with the code provided
-         - 3 parts that mirror the Java code
-           - each part was discuss, with code, in class
+         - 3 parts in MIPS that mirror the Java code
+           - each part was discussed, with code, in class
       1. Looks easy when the Prof does it on the board
          - Examplar code provided by the Prof
          - Many students (16) delayed until Sept 7 to start
@@ -28,9 +28,8 @@
 
 
 ## Today's Agenda
-   1. Using the MARS debugger
-   1. Practicum in writting MIPS Code
-
+   1. Practicum in writting MIPS Code, using the MARS debugger
+   1. Inclass Lab Assignment
 
 ## Questions
    1. M/W M:
