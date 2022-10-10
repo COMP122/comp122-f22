@@ -28,12 +28,13 @@
 
 
 ## Today's Agenda
-   1. Practicum in writting MIPS Code, using the MARS debugger
+   1. Practicum in writing MIPS Code, using the MARS debugger
    1. Inclass Lab Assignment
 
 ## Questions
    1. M/W M:
-      - 
+      - Why `exiti 0` as opposed to `move $v0 $?`
+      - 21 students in attendance 
    1. M/W A:
       - 
    1. T/R M: 
@@ -44,20 +45,26 @@
 ## Today's Material
 
   1. Walk through 
+
   ```
+  int main() {
+    series(4, 16);
+    System.exit();
+  }
+
   int series(int a, int b) {
     int x;
     int i;
 
     x = a - b;
-    system.out.printf("%d", x);
-    system.out.printf("\n");
+    System.out.printf("%d", x);
+    System.out.printf("\n");
 
     for (i=a; i<b; i++) {
-      system.out.printf("%d", i);
-      system.out.printf(",");
+      System.out.printf("%d", i);
+      System.out.printf(",");
     }
-    system.out.printf("%d\n", i);
+    System.out.printf("%d\n", i);
     return b - a;
   }
   ```
