@@ -127,7 +127,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 1. Name: 
    - Status: Released
    - Invitation URL: https://classroom.github.com/a/HIzjhCrn
-   - Due:
+   - Due: Sunday, 9 October 1922 @11:59PM
    - Repo Prefix: 41-echo
 
 1. Name: 
