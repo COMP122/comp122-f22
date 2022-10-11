@@ -42,7 +42,7 @@
       - la versus lb
       - 65 students in total
    1. T/R A: 
-      - 
+      - 88 students in total
 
 ## Today's Material
 
