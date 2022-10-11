@@ -29,16 +29,18 @@
 
 ## Today's Agenda
    1. Practicum in writing MIPS Code, using the MARS debugger
-   1. Inclass Lab Assignment
+   1. In-class Lab Assignment
 
 ## Questions
    1. M/W M:
       - Why `exiti 0` as opposed to `move $v0 $?`
       - 21 students in attendance 
    1. M/W A:
-      - 
+      - 46 students in total
    1. T/R M: 
-      - 
+      - when to use "j"umps versus "b"ranches
+      - la versus lb
+      - 65 students in total
    1. T/R A: 
       - 
 
