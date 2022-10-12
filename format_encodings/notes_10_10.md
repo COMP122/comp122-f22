@@ -1,4 +1,4 @@
-# COMP122 Lecture Notes: October 10 & 11, 2022
+# COMP122 Lecture Notes: October 10 - 13, 2022
 
 ## Announcements
    1. 41-echo: Due Sunday night Oct 9
