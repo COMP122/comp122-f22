@@ -34,7 +34,7 @@
 ## Questions
    1. M/W M:
       - Why `exiti 0` as opposed to `move $v0 $?`
-      - 21 students in attendance 
+      - 21 students in attendance, 15 on W
    1. M/W A:
       - 46 students in total
    1. T/R M: 
