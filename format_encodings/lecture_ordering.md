@@ -24,21 +24,23 @@
      * Scientific Notation
      * Floating Point Numbers (foreshadow)
   
-  1. Base10: Mathematical Review
-     * Addition
-     * BCD Addition
-     * Subtraction
-     * Method of Complements
-     * Subtraction via Complements
-     * Multiplication
-  
-  1. Base2: Encoding and Mathematical Operations
-     * Binary Addition
-     * Subtraction (Traditional Method)
-     * Method of Complements (2's and 1's Complement)
-       - Encoding of Negative Numbers
-     * Subtraction via Complements
-     * Binary Multiplication
+  1. Mathematical Review & Base 2 Encodings
+     * Condensed the following into a single slide deck
+       1. Base10: Mathematical Review
+          * Addition
+          * BCD Addition
+          * Subtraction
+          * Method of Complements
+          * Subtraction via Complements
+          * Multiplication
+       
+       1. Base2: Encoding and Mathematical Operations
+          * Binary Addition
+          * Subtraction (Traditional Method)
+          * Method of Complements (2's and 1's Complement)
+            - Encoding of Negative Numbers
+          * Subtraction via Complements
+          * Binary Multiplication
   
   1. Conversion between Bases
      * Between Powers of 2
