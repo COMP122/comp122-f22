@@ -25,6 +25,7 @@
 
 ## Questions
    1. M/W M:
+      - What are the status bits (C, V, S, Z) used for?
    1. M/W A:
    1. T/R M: 
    1. T/R A: 
@@ -32,6 +33,18 @@
 ## Today's Material
 
    1. See Addendum Page
+
+   1. Expanded Notation
+
+   | v | = | v | * base + |  digit |  glyph  |
+   |---|---|---|----------|--------|---------|
+   |   | = |   | * base + |        |         |
+
+
+
+   |   | = |   | * base + |        |         |
+
+
 
    1. Convert whole to binary
       ```

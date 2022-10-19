@@ -6,7 +6,7 @@
 
 
 ## Today's Agenda
-   1. Mathematical Review and Extension
+   1. Mathematical Review and Extension to Base 2
 
 ## Questions
    1. M/W M:
