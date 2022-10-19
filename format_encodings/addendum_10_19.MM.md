@@ -117,9 +117,6 @@
       answer= 0101 ... (read from the top down)
       ```
 
-
-
-
  1. Formats:
     1. Convert 14 -> formats of size 8 bits
        - binary:   0000 1110
