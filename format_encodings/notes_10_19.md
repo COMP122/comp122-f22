@@ -11,7 +11,7 @@
    1. Conversion from base 16, 8, 2 -> Decimal
       - Right -> Left method:  Expanded Notation
       - Left -> Right method:  loop: multiple; add;
-   1. Conversion from Decimal -> base N
+   1. Conversion from Decimal Reals -> base N
       - whole part: successive integer divisions
         * number / 2 -> whole , remainder
       - fractional part: successive multiplications
@@ -24,15 +24,16 @@
          - Java       unsigned int: 32 bits --  0..4M
       1. 1's complement (signed integer)
       1. 2's complement (signed integer)
+         - java                int: 32 bits -- -2147483648 to 2147483647
       1. BCD (same as Hex, but without A-F)
 
 
 ## Questions
    1. M/W M:
       - What are the status bits (C, V, S, Z) used for?
-      - Difference between C & V
    1. M/W A:
    1. T/R M: 
+      - Difference between C & V
    1. T/R A: 
 
 ## Today's Material

@@ -87,12 +87,12 @@
 1. Encoding for 8 bits:  2#   101 0101
       - unsigned xxxx xxxx: 0101 0101
       - 1's s xxx xxxx:  0 101 0101
-        - pad:
-        - flip:
+        - pad:  
+        - flip: -- not negative
       - 2's s xxx xxxx: 0 101 0101
         - pad: 
-        - flip:
-        - add 1:
+        - flip: -- not negative
+        - add 1: -- not negative
 
 1. Encoding for 8 bits:  2#  - 101 0101
       - unsigned xxxx xxxx: NA

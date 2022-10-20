@@ -9,22 +9,21 @@
    | 2    | = | 0   | * 16   + |    2   |     2   |
    | 47   | = | 2   | * 16   + |   15   |     F   |
    | 755  | = | 47  | * 16   + |    3   |     3   |
-   | 1512 | = | 755 | * base + |    2   |     2   |
-   |      | = | 1512| * base + |    7   |     7   |
-   |      | = |     | * base + |    8   |     8   |
+   | 1512 | = | 755 | * 16   + |    2   |     2   |
+   |      | = | 1512| * 16   + |    7   |     7   |
+   |      | = |     | * 16   + |    8   |     8   |
 
 
-   |      | = |     | * base + |        |         |
 
 
 1. Convert 8# 3462  --> Decimal
 
-  | v    | = | v   | * 8 + |  digit |  glyph  |
-  |------|---|-----|-------|--------|---------|
-  |  3   | = |  0  | * 8 + |    3   |    3    |
-  |  28  | = |  3  | * 8 + |    4   |    4    |
-  |  230 | = |  28 | * 8 + |    6   |    6    |
-  | 1842 | = |  230| * 8 + |    2   |    2    |
+  | v    | = | v    | * 8 + |  digit |  glyph  |
+  |------|---|------|-------|--------|---------|
+  |  3   | = |  0   | * 8 + |    3   |    3    |
+  |  28  | = |  3   | * 8 + |    4   |    4    |
+  |  230 | = |  28  | * 8 + |    6   |    6    |
+  | 1842 | = |  230 | * 8 + |    2   |    2    |
 
 
 1. Convert 10# 3462  --> Decimal
@@ -127,22 +126,31 @@
 
     1. Convert -14 -> formats of size 8 bits
        - binary:   -0000 1110
-       - unsigned: NA
-       - 1's:     1111 0001
-       - 2's:     1111 0001 + 1 : 1111 0010
-
+       - unsigned (xxxx xxxx): NA
+       - 1's (s xxx xxxx): 1 111 0001
+         - pad:   000 1110
+         - flip:  111 0001
+       - 2's (s xxx xxxx): 1 111 0010
+         - pad:   000 1110
+         - flip:  111 0001
+         - add 1: 111 0010
 
     1. Convert  -523 -> formats of size 8 bits
-       - binary: -10 00001011
-       - unsigned: NA   requires 10 bits
-       - 1's :     NA   requires 10 bits
-       - 2's"      NA   requires 10 bits
+       - binary: - 10 00001011
+       - unsigned (xxxx xxxx): NA   requires 10 bits
+       - 1's (s xxx xxxx):     NA   requires 10 bits
+       - 2's (s xxx xxxx)      NA   requires 10 bits
 
 1. Convert - 14 -> formats of size 16 bits
-       - binary:   -0000 0000 0000 1110
-       - unsigned: NA
-       - 1's:     1111 1111 1111 0001  <= 000 0000 0000 1110
-       - 2's:     1111 1111 1111 0010
+       - binary:   - 1110
+       - unsigned (xxxx xxxx xxxx xxxx): NA
+       - 1's (s xxx xxxx xxxx xxxx):     1111 1111 1111 0001
+         - pad:  000 0000 0000 1110
+         - flip: 111 1111 1111 0001
+       - 2's (s xxx xxxx xxxx xxxx):     1111 1111 1111 0010
+         - pad:   000 0000 0000 1110
+         - flip:  111 1111 1111 0001
+         - add 1: 111 1111 1111 0010
 
 
 
