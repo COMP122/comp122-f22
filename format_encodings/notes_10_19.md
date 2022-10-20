@@ -17,7 +17,11 @@
       - fractional part: successive multiplications
         * number * 2 -> overflow, product
    1. Review of Encodings:
-      1. binary (unsigned integer)
+      1. binary 
+      1. unsigned integer
+         - C                  char:  8 bits --  0..255
+         - Java short unsigned int: 16 bits --  0..64k
+         - Java       unsigned int: 32 bits --  0..4M
       1. 1's complement (signed integer)
       1. 2's complement (signed integer)
       1. BCD (same as Hex, but without A-F)
@@ -26,6 +30,7 @@
 ## Questions
    1. M/W M:
       - What are the status bits (C, V, S, Z) used for?
+      - Difference between C & V
    1. M/W A:
    1. T/R M: 
    1. T/R A: 
