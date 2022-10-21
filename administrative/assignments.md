@@ -94,9 +94,9 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Repo Prefix: 22-utf-encoding
 
 1. Name: binary-addition
-   - Status: 
-   - Invitation URL: 
-   - Due: 
+   - Status: Assigned
+   - Invitation URL: https://classroom.github.com/a/5jRwjKrf
+   - Due: Tuesday Oct 25, 2022 @11:59 PM 
    - Repo Prefix: 23-binary-addition
 
 1. Name: floating-point-encoding
