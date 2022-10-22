@@ -19,9 +19,9 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Repo Prefix: 10-quiz-models
 
 1. Exam 2: Formats and Encodings
-   - Status: 
+   - Status: Announced
    - Invitation URL:
-   - Due:  -- at the end of lecture/lab
+   - Due:   10/24 & 10/25 -- at the end of lecture/lab
    - Additional Information:
    - Repo Prefix: 20-formats
 
