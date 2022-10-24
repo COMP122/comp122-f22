@@ -1,95 +1,38 @@
-# COMP122 Lecture Notes: October 19 & 20, 2022
+# COMP122 Lecture Notes: October 24, 2022
 
 ## Announcements
-   1. In-class (42-kickstart) assignment is overdue.
-      - Originally due at the end of W/R class (Oct 12/13)
-      - More time was provided.
+   1. Exam #2 Announced
+      - Oct 31 / Nov 2
+      - In-class
+      - Format: similar to HW assignments
+      - Coverage:  Format and Encodings
+   1. Assignments Released
+      - 24-floating-point-encoding
+      - 25-bitwise-operations
+   1. Plan:
+      - Today: Complete Coverage of Material today
+      - W/R:  Practicum and/or Review
 
 ## Today's Agenda
-   1. M/W A: Pickup at Multiplication
-   1. Conversions between bases of "Powers of 2"
-   1. Conversion from base 16, 8, 2 -> Decimal
-      - Right -> Left method:  Expanded Notation
-      - Left -> Right method:  loop: multiple; add;
-   1. Conversion from Decimal Reals -> base N
-      - whole part: successive integer divisions
-        * number / 2 -> whole , remainder
-      - fractional part: successive multiplications
-        * number * 2 -> overflow, product
-   1. Review of Encodings:
-      1. binary 
-      1. unsigned integer
-         - C                  char:  8 bits --  0..255
-         - Java short unsigned int: 16 bits --  0..64k
-         - Java       unsigned int: 32 bits --  0..4M
-      1. 1's complement (signed integer)
-      1. 2's complement (signed integer)
-         - java                int: 32 bits -- -2147483648 to 2147483647
-      1. BCD (same as Hex, but without A-F)
+   1. Floating Point Encoding
+   1. Bitwise operations
+      - nor (\~), and (&), or (|), and xor (^) 
+      - shifts and rotates
+      - bit manipulation
 
 
 ## Questions
    1. M/W M:
-      - What are the status bits (C, V, S, Z) used for?
    1. M/W A:
    1. T/R M: 
-      - Difference between C & V
    1. T/R A: 
 
 ## Today's Material
 
-   1. See Addendum Page
-
-   1. Expanded Notation
-
-   | v | = | v | * base + |  digit |  glyph  |
-   |---|---|---|----------|--------|---------|
-   |   | = |   | * base + |        |         |
-
-
-
-   |   | = |   | * base + |        |         |
-
-
-
-   1. Convert whole to binary
-      ```
-      number = 1234
-
-         1234 / 2 -> 617, 0
-         617 / 2 -> 308, 1
-         308 / 2 -> 154, 0
-         154 / 2 -> 77, 0
-         77 / 2 -> 38, 1
-         38 / 2 -> 19, 0
-         19 / 2 -> 9, 1
-         9 / 2 -> 4, 1
-         4 / 2 -> 2, 0
-         2 / 2 -> 1, 0
-         1 / 2 -> 0, 1
-         0 / 2 -> 0, 0
-
-      answer = 2# 10011010010    (reading up!)
-      ```
-
-   1. Convert fraction to binary
-      ```
-      number:  0.0567
-      max   =  1,0000
-
-        567  * 2 =   1134 -> 0
-        1134 * 2 =   2268 -> 0
-        2268 * 2 =   4536 -> 0
-        4536 * 2 =   9072 -> 0
-        9072 * 2 = 1,8144 -> 1
-        8144 * 2 = 1,6288 -> 1
-
-      answer: 2# 000011 ... 101000001111100100001001
-      ```
-
 ---
 ## Resources
-   1. Rechunk Examples: https://docs.google.com/spreadsheets/d/1tBmsjIwX6u5yHchqwrEnGIQBAEeGehVoaiRYv_lCpOA/edit#gid=0
-   1. Base Conversion: https://docs.google.com/spreadsheets/d/1aMvlfw_rzvYBObT94dX8v_O0EgELHgWrmZgWKmoLY7s/edit#gid=1434558784
+   1. conversion_2float.md: class-material/format_encodings/conversion_2float.md
+   1. Floating Point: https://docs.google.com/presentation/d/13tNZwZO81TJvirJHBU2-nThO-3xQ9ZmZUZUEzBxYNMA/edit#slide=id.gf1bcb9d487_0_2364
+   1. Bitwise Operations: https://docs.google.com/presentation/d/1h3Q4srhBRhfdQsMj8mI9YWbxl3g6ZMcCzyt6yvz7k9g/edit#slide=id.g10e6aad98fb_0_254
 
 
