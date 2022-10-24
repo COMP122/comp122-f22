@@ -3,7 +3,7 @@
 ## Announcements
    1. Exam #2 Announced
       - Oct 31 / Nov 2
-      - In-class
+      - In-class: @ the day/time in which you are enrolled
       - Format: similar to HW assignments
       - Coverage:  Format and Encodings
    1. Assignments Released
