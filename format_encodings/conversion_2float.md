@@ -31,7 +31,7 @@ The following steps can be used to convert a binary real to IEEE floating point 
      | Comp122   |     8 |  1   |  3       |        4 |              `011` |             3 |
      | Binary16  |    16 |  1   |  5       |       10 |            `01111` |            15 |
      | Binary32  |    32 |  1   |  8       |       23 |         `01111111` |           127 |
-     | Binary64  |    64 |  1   |  11      |       52 |      `01111111111` |          1024 |
+     | Binary64  |    64 |  1   |  11      |       52 |      `01111111111` |          1023 |
      | Binary128 |   128 |  1   |  15      |      112 |  `011111111111111` |         16383 |
 
    - The general format for all IEEE floating point numbers is the concatenation of the Sign, Exponent, then followed by the Mantissa.
