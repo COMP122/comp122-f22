@@ -2,7 +2,7 @@
 
 ## Announcements
    1. Exam #2 Announced
-      - Oct 31 / Nov 2
+      - Oct 31 / Nov 1
       - In-class: @ the day/time in which you are enrolled
       - Format: similar to HW assignments
       - Coverage: Format and Encodings
@@ -27,6 +27,7 @@
    1. M/W A:
       - when doing binary subtraction when do I do an initial 1 as a carry in
    1. T/R M: 
+      - BCD addition
    1. T/R A: 
 
 ## Today's Material
