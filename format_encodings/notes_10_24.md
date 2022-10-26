@@ -28,7 +28,8 @@
       - when doing binary subtraction when do I do an initial 1 as a carry in
    1. T/R M: 
       - BCD addition
-   1. T/R A: 
+   1. T/R A:
+      -  Converting from decimal, what is the max! 
 
 ## Today's Material
 
