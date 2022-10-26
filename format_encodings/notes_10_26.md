@@ -1,4 +1,4 @@
-# COMP122 Lecture Notes: October 26 & 28, 2022
+# COMP122 Lecture Notes: October 26 & 27, 2022
 
 ## Announcements
    1. Exam #2 Announced
