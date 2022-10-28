@@ -15,7 +15,7 @@
         * https://docs.google.com/spreadsheets/d/1Jlo2GmWvl4bxlPN9GzXsKnl4acyppBWYQjX2S_Bm9oQ/edit#gid=0
       - 2^6 = 64 -> 6 bit encoding scheme
       - e.g., 01 0010 -> 'S'
-      - e.g., 11 0101 | 10 1110 | 00 1101 -> '1' 'u' 'N'
+      - e.g., 00 1111 | 00 0110 | 10 1010 -> 'P' 'G' 'q' 
    1. Base64 Motivation  (see slides)
    1. Program: Base64 (see slides)
 
@@ -41,9 +41,17 @@
       - Encoding of 1's and 2's complement for both positive and negative numbers
       - Clarification on sra
 
-
-
    1. T/R A:
+      - utf8
+      - binary real -> float encoding (binary16)
+        - negative floating point
+      - BCD addition with the corrective step
+      - complements of numbers (as opposed to encoding in 1's and 2's complement)
+
+
+
+
+
 
 ## Today's Material
 
