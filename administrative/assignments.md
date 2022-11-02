@@ -82,13 +82,13 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 <h3 id="format">Format and Encoding (Section 2)</h3>
 
 1. Name: table-encodings
-   - Status: Assigned
+   - Status: Graded
    - Invitation URL: https://classroom.github.com/a/SBtxigqy
    - Due: Friday Sept 30, 2022 @11:59 PM
    - Repo Prefix: 21-table-encodings
 
 1. Name: utf8-encoding
-   - Status: Assigned
+   - Status: Graded
    - Invitation URL: https://classroom.github.com/a/dICVuHQv
    - Due: Monday Oct 3, 2022 @11:59 PM
    - Repo Prefix: 22-utf-encoding
