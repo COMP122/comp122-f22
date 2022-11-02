@@ -5,8 +5,6 @@
    1. Class Material:  class-material/digital_logic
    1. Goal: To reduce the size of this section 
 
-
-
 ## Today's Agenda
    1. Review Slides on Models
    1. Equivalence of Boolean Algebra ⇔ Digital Circuits
@@ -16,9 +14,9 @@
    1. Boolean Algebra Simplification
    1. Karnaugh Maps
 
-
 ## Questions
    1. M/W M:
+      - How do I get my overall score for the class?
    1. M/W A:
    1. T/R M: 
    1. T/R A:
