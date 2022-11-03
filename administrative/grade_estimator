@@ -1,0 +1,149 @@
+#! /bin/bash
+
+PARTICIPATION_SCORES=( )
+  # The participation score can't be provided till the end of the semester
+  # Via self-evaluation, you can define a value above. 
+  # 
+  # For example, if you believe you are slight above average in 
+  #    1. attending class,
+  #    1. asking questions, etc., in class,
+  #    1. participating in Slack communications,
+  #    1. providing feedback by the feedback system,
+  #    1. turn in your assignments in on time,
+  #    1. etc., 
+  #
+  # You could associate a score of 78% for your participation.
+  # 
+  #    PARTICAPTION_SCORE=( 78 )
+
+# Syllabus Breakdown
+PARTICIPATION_WIEGHT=0.15
+LABORATORY_WIEGHT=0.40
+QUIZ_WIEGHT=0.15
+EXAM_WIEGHT=0.30
+
+
+#####################################################################
+
+dir_name=$(basename $(pwd) )
+if [[ dir_name != 'deliverables' ]] ; then
+  echo "You need to run this program from the 'deliverables' directory."
+  exit 1
+fi
+
+function average () {
+
+  if (( $# == 0 )) ; then
+    echo "0"
+  else
+    for ((i=0; i < $#; i++) ; do
+      (( value += $(eval echo "${i}") ; do
+    done
+    echo "$(( value / i ))"
+  fi
+}
+
+
+# Algorithm:
+#   1. source all the available grade.reports
+#   1. collect individual scores into category scores
+#      1. Participation Scores:
+#         * we anticipate there will be no participation scores
+#         * skip this step if the student provided a "guess"
+#      1. Laboratory Scores:
+#         * Section 1:  1[0-9].total
+#         * Section 2:  2[0-9].total
+#         * Section 3:  3[0-9].total
+#         * Section 4:  4[0-9].total
+#      1. Quiz Scores:
+#         * Section 1:  10.total
+#         * Section 2:  30.total
+#      1. Exam Scores:
+#         * Section 1:  20.total
+#         * Section 2:  40.total
+#   1. Calculate the average for each section
+#   1. If Participation Score is undefined,
+#      * prompt the user for "guess"
+#      * if zero, then assign the value average of the other sections
+#   1. Perform a weighted sum of all the sectional scores
+#   1. Emit a report 
+
+# Source each grade.report
+find . -name grade.report -exec source {} \;
+  # Note that we need to modify the structure of the 'grade.report's
+
+# Collect the Participation Scores
+if [[ -z "$PARTICIPATION_SCORES" ]] ; then
+  PARTICIPATION_SCORES=( )
+   for i in 1 2 3 4 5 6 7 8 9 ; do
+     PARTICIPATION_SCORES+=( ${0${i}.total} )  
+   done
+  PARTICIPATION_CALCULATION="calc"
+fi
+
+# Collect the Laboratory Scores
+LABORATORY_SCORES=( )
+   for i in 1 2 3 4 5 6 7 8 9 ; do
+     LABORATORY_SCORES+=( ${1${i}_total} )  
+     LABORATORY_SCORES+=( ${2${i}_total} )
+     LABORATORY_SCORES+=( ${3${i}_total} )
+     LABORATORY_SCORES+=( ${4${i}_total} )
+   done
+
+# Collect the Quiz and Exam scores
+QUIZ_SCORES=( 10_total 30_total )
+EXAM_SOURCES=( 20_total 40_total )
+
+
+# Calculate the Average in each section
+PARTICIPATION_AVERAGE=$(average "${PARTIPATION_SCORES[@]}")
+LABORATORY_AVERAGE=$(average "${LABORATORY_SCORES[@]}")
+QUIZ_AVERAGE=$(average "${QUIZ_SCORES[@]}")
+EXAM_AVERAGE=$(average "${EXAM_SCORES[@]}")
+
+
+# Syllabus Breakdown
+PARTICIPATION_WIEGHT=0.15
+LABORATORY_WIEGHT=0.40
+QUIZ_WIEGHT=0.15
+EXAM_WIEGHT=0.30
+
+
+if (( ${#PARTICIPATION_SCORES[@]} == 0 )) ; then 
+   echo "Based upon self-evaluation, enter your participation score"
+   read -p "Participation (0 .. 100): "  X
+   PARTICIPATION_SCORES=( X )
+   PARTICIPATION_CALCULATION=entered
+fi
+if (( ${#PARTICIPATION_SCORES[@]} == 0 )) ; then 
+   PARTICIPATION_SCORES=$( average $LABORATORY_AVERAGE $QUIZ_AVERAGE $EXAM_AVERAGE )
+   PARTICIPATION_CALCULATION=average
+fi
+
+# Individual Calculation
+PARTIPICATION_GP=$(( PARTIPICATION_TOTAL * WEIGHT ))
+LABORATORY_GP$(( LABORATORY_TOTAL * WEIGHT ))
+QUIZ_GP=$(( QUIZ_TOTAL * WEIGHT ))
+EXAM_GP=$(( EXAM_TOTAL * WEIGHT ))
+
+
+CURRENT_GP=$((  PARTIPICATION_GP + LABATORY_GP  + QUIZ_GP + EXAM_GP  ))
+
+# Consider making the output .md
+cat <<EOF
+  Based upon the current grading of deliverables, the following is
+  the breakdown of your current grade.
+
+  Note that this current grade is only an estimate.
+  I.e. Past performance does not predict future performance.
+
+                          Average           Weight
+  Participation ($PARTICIPATION_CALCULATION):          ${PARTICIPATION_AVERAGE}		${PARTICIPATION_WEIGHT}
+  Laboratory Assignments: ${LABORATORY_AVERAGE}		${LABORATORY_WEIGHT}
+  Quizzes (2):            ${QUIZ_AVERAGE}		(${QUIZ_WEIGHT})
+  Exams (2):              ${EXAM_AVERAGE}		(${EXAM_WEIGHT})
+  ----------              -------------
+  Weighted Total:         ${CURRENT_GP}
+
+
+EOF
