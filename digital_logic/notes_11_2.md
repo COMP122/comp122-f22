@@ -20,7 +20,9 @@
    1. M/W A:
       - How do I get my overall score for the class?
    1. T/R M: 
+      - How do I get my overall score for the class?
    1. T/R A:
+      - How do I get my overall score for the class?
 
 
 ## Today's Material
