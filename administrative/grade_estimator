@@ -26,23 +26,23 @@ EXAM_WIEGHT=0.30
 #####################################################################
 
 dir_name=$(basename $(pwd) )
-if [[ dir_name != 'deliverables' ]] ; then
+if [[ dir_name == 'deliverables' ]] ; then
   echo "You need to run this program from the 'deliverables' directory."
   exit 1
 fi
 
 function average () {
 
+  value=0
   if (( $# == 0 )) ; then
     echo "0"
   else
-    for ((i=0; i < $#; i++) ; do
-      (( value += $(eval echo "${i}") ; do
+    for ((i=1; i <= $#; i++)) ; do
+      (( value += $(eval echo "\${${i}}") )) 
     done
-    echo "$(( value / i ))"
+    echo "$(( value / ( i - 1 ) ))"
   fi
 }
-
 
 # Algorithm:
 #   1. source all the available grade.reports
@@ -51,16 +51,16 @@ function average () {
 #         * we anticipate there will be no participation scores
 #         * skip this step if the student provided a "guess"
 #      1. Laboratory Scores:
-#         * Section 1:  1[0-9].total
-#         * Section 2:  2[0-9].total
-#         * Section 3:  3[0-9].total
-#         * Section 4:  4[0-9].total
+#         * Section 1:  ASSIGNMENT_1[0-9]_total
+#         * Section 2:  ASSIGNMENT_2[0-9]_total
+#         * Section 3:  ASSIGNMENT_3[0-9]_total
+#         * Section 4:  ASSIGNMENT_4[0-9]_total
 #      1. Quiz Scores:
-#         * Section 1:  10.total
-#         * Section 2:  30.total
+#         * Section 1:  ASSIGNMENT_10_total
+#         * Section 2:  ASSIGNMENT_30_total
 #      1. Exam Scores:
-#         * Section 1:  20.total
-#         * Section 2:  40.total
+#         * Section 1:  ASSIGNMENT_20_total
+#         * Section 2:  ASSIGNMENT_40_total
 #   1. Calculate the average for each section
 #   1. If Participation Score is undefined,
 #      * prompt the user for "guess"
@@ -72,11 +72,34 @@ function average () {
 find . -name grade.report -exec source {} \;
   # Note that we need to modify the structure of the 'grade.report's
 
+ASSIGNMENT_10_total=75
+ASSIGNMENT_20_total=75
+ASSIGNMENT_30_total=75
+ASSIGNMENT_40_total=75
+ASSIGNMENT_11_total=75
+ASSIGNMENT_12_total=75
+ASSIGNMENT_21_total=75
+ASSIGNMENT_22_total=75
+ASSIGNMENT_23_total=75
+ASSIGNMENT_21_total=75
+ASSIGNMENT_35_total=75
+ASSIGNMENT_34_total=75
+ASSIGNMENT_33_total=75
+ASSIGNMENT_32_total=75
+ASSIGNMENT_42_total=75
+ASSIGNMENT_43_total=75
+ASSIGNMENT_44_total=75
+ASSIGNMENT_45_total=75
+
+
+
+
+
 # Collect the Participation Scores
 if [[ -z "$PARTICIPATION_SCORES" ]] ; then
   PARTICIPATION_SCORES=( )
    for i in 1 2 3 4 5 6 7 8 9 ; do
-     PARTICIPATION_SCORES+=( ${0${i}.total} )  
+     PARTICIPATION_SCORES+=( $( eval echo "\${ASSIGNMENTS_0${i}_total}" ) )  
    done
   PARTICIPATION_CALCULATION="calc"
 fi
@@ -84,15 +107,15 @@ fi
 # Collect the Laboratory Scores
 LABORATORY_SCORES=( )
    for i in 1 2 3 4 5 6 7 8 9 ; do
-     LABORATORY_SCORES+=( ${1${i}_total} )  
-     LABORATORY_SCORES+=( ${2${i}_total} )
-     LABORATORY_SCORES+=( ${3${i}_total} )
-     LABORATORY_SCORES+=( ${4${i}_total} )
+     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENTS_1${i}_total}" )
+     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENTS_2${i}_total}" )
+     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENTS_3${i}_total}" )
+     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENTS_4${i}_total}" )
    done
 
 # Collect the Quiz and Exam scores
-QUIZ_SCORES=( 10_total 30_total )
-EXAM_SOURCES=( 20_total 40_total )
+QUIZ_SCORES=( ASSIGNMENT_10_total ASSIGNMENT_30_total )
+EXAM_SOURCES=( ASSIGNMENT_20_total ASSIGNMENT_40_total )
 
 
 # Calculate the Average in each section
@@ -122,7 +145,7 @@ fi
 
 # Individual Calculation
 PARTIPICATION_GP=$(( PARTIPICATION_TOTAL * WEIGHT ))
-LABORATORY_GP$(( LABORATORY_TOTAL * WEIGHT ))
+LABORATORY_GP=$(( LABORATORY_TOTAL * WEIGHT ))
 QUIZ_GP=$(( QUIZ_TOTAL * WEIGHT ))
 EXAM_GP=$(( EXAM_TOTAL * WEIGHT ))
 
