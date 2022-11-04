@@ -14,13 +14,13 @@ PARTICIPATION_SCORES=( )
   #
   # You could associate a score of 78% for your participation.
   # 
-  #    PARTICAPTION_SCORE=( 78 )
+  #    PARTICIPATION_SCORE=( 78 )
 
 # Syllabus Breakdown
-PARTICIPATION_WIEGHT=0.15
-LABORATORY_WIEGHT=0.40
-QUIZ_WIEGHT=0.15
-EXAM_WIEGHT=0.30
+PARTICIPATION_WEIGHT=0.15
+LABORATORY_WEIGHT=0.40
+QUIZ_WEIGHT=0.15
+EXAM_WEIGHT=0.30
 
 
 #####################################################################
@@ -45,7 +45,8 @@ function average () {
 }
 
 # Algorithm:
-#   1. source all the available grade.reports
+#   1. source the default grades for deliverables that have not been assigned
+#   1. source all the available "grade.report"s
 #   1. collect individual scores into category scores
 #      1. Participation Scores:
 #         * we anticipate there will be no participation scores
@@ -68,30 +69,15 @@ function average () {
 #   1. Perform a weighted sum of all the sectional scores
 #   1. Emit a report 
 
+# Source the default grade assignment
+if [[ -f grade_estimator.defaults ]] ; then
+  source grade_estimator.defaults
+fi
+
 # Source each grade.report
-find . -name grade.report -exec source {} \;
-  # Note that we need to modify the structure of the 'grade.report's
-
-ASSIGNMENT_10_total=75
-ASSIGNMENT_20_total=75
-ASSIGNMENT_30_total=75
-ASSIGNMENT_40_total=75
-ASSIGNMENT_11_total=75
-ASSIGNMENT_12_total=75
-ASSIGNMENT_21_total=75
-ASSIGNMENT_22_total=75
-ASSIGNMENT_23_total=75
-ASSIGNMENT_21_total=75
-ASSIGNMENT_35_total=75
-ASSIGNMENT_34_total=75
-ASSIGNMENT_33_total=75
-ASSIGNMENT_32_total=75
-ASSIGNMENT_42_total=75
-ASSIGNMENT_43_total=75
-ASSIGNMENT_44_total=75
-ASSIGNMENT_45_total=75
-
-
+while read _grade_report ; do
+    source $_grade_report
+done < <( find . -name grade.report -print )
 
 
 
@@ -101,72 +87,87 @@ if [[ -z "$PARTICIPATION_SCORES" ]] ; then
    for i in 1 2 3 4 5 6 7 8 9 ; do
      PARTICIPATION_SCORES+=( $( eval echo "\${ASSIGNMENTS_0${i}_total}" ) )  
    done
-  PARTICIPATION_CALCULATION="calc"
 fi
 
 # Collect the Laboratory Scores
 LABORATORY_SCORES=( )
    for i in 1 2 3 4 5 6 7 8 9 ; do
-     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENTS_1${i}_total}" )
-     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENTS_2${i}_total}" )
-     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENTS_3${i}_total}" )
-     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENTS_4${i}_total}" )
+     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENTS_1${i}_total}" ) )
+     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENTS_2${i}_total}" ) )
+     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENTS_3${i}_total}" ) )
+     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENTS_4${i}_total}" ) )
    done
 
 # Collect the Quiz and Exam scores
-QUIZ_SCORES=( ASSIGNMENT_10_total ASSIGNMENT_30_total )
-EXAM_SOURCES=( ASSIGNMENT_20_total ASSIGNMENT_40_total )
+QUIZ_SCORES=( ${ASSIGNMENT_10_total} ${ASSIGNMENT_30_total} )
+EXAM_SCORES=( ${ASSIGNMENT_20_total} ${ASSIGNMENT_40_total} )
 
 
 # Calculate the Average in each section
-PARTICIPATION_AVERAGE=$(average "${PARTIPATION_SCORES[@]}")
+
+# For Participation Average, there are several ways to compute the participation
+# - if there are individual scores-- use them
+# - if there is a assigned default -- use it
+# - if the user is prompt for a value, and it is non zero, use it
+# - otherwise assign the participation to the average of the other scores
+if (( ${#PARTICIPATION_SCORES[@]} != 0 )) ; then 
+   PARTICIPATION_AVERAGE=$(average "${PARTIPATION_SCORES[@]}")
+   PARTICIPATION_CALCULATION=actual
+elif [[ -n "${ASSIGNMENT_00_total}" ]] && (( ${ASSIGNMENT_00_total} != 0 )) ; then
+   PARTICIPATION_AVERAGE=${ASSIGNMENT_00_total} 
+   PARTICIPATION_CALCULATION=default
+else
+   echo "Based upon self-evaluation, enter your participation score."
+   echo "Skip if you you want your participation score to be equal to the average of your other scores"
+   read -p "Participation (0 .. 100): "  X
+   PARTICIPATION_AVERAGE="$X"
+   PARTICIPATION_CALCULATION=entered
+fi
+if (( ${PARTICIPATION_AVERAGE} == 0 )) ; then 
+   PARTICIPATION_AVERAGE=$( average $LABORATORY_AVERAGE $QUIZ_AVERAGE $EXAM_AVERAGE )
+   PARTICIPATION_CALCULATION=averaged
+fi
+
 LABORATORY_AVERAGE=$(average "${LABORATORY_SCORES[@]}")
 QUIZ_AVERAGE=$(average "${QUIZ_SCORES[@]}")
 EXAM_AVERAGE=$(average "${EXAM_SCORES[@]}")
 
 
 # Syllabus Breakdown
-PARTICIPATION_WIEGHT=0.15
-LABORATORY_WIEGHT=0.40
-QUIZ_WIEGHT=0.15
-EXAM_WIEGHT=0.30
+PARTICIPATION_PERCENT=15
+LABORATORY_PERCENT=40
+QUIZ_PERCENT=15
+EXAM_PERCENT=30
+
+# Individual Calculation (Note integer division, hence some information loss)
+PARTICIPATION_GP=$(( PARTICIPATION_AVERAGE * PARTICIPATION_PERCENT / 100 ))
+LABORATORY_GP=$(( LABORATORY_AVERAGE * LABORATORY_PERCENT / 100 ))
+QUIZ_GP=$(( QUIZ_AVERAGE * QUIZ_PERCENT / 100 ))
+EXAM_GP=$(( EXAM_AVERAGE * EXAM_PERCENT / 100 ))
 
 
-if (( ${#PARTICIPATION_SCORES[@]} == 0 )) ; then 
-   echo "Based upon self-evaluation, enter your participation score"
-   read -p "Participation (0 .. 100): "  X
-   PARTICIPATION_SCORES=( X )
-   PARTICIPATION_CALCULATION=entered
-fi
-if (( ${#PARTICIPATION_SCORES[@]} == 0 )) ; then 
-   PARTICIPATION_SCORES=$( average $LABORATORY_AVERAGE $QUIZ_AVERAGE $EXAM_AVERAGE )
-   PARTICIPATION_CALCULATION=average
-fi
-
-# Individual Calculation
-PARTIPICATION_GP=$(( PARTIPICATION_TOTAL * WEIGHT ))
-LABORATORY_GP=$(( LABORATORY_TOTAL * WEIGHT ))
-QUIZ_GP=$(( QUIZ_TOTAL * WEIGHT ))
-EXAM_GP=$(( EXAM_TOTAL * WEIGHT ))
-
-
-CURRENT_GP=$((  PARTIPICATION_GP + LABATORY_GP  + QUIZ_GP + EXAM_GP  ))
+CURRENT_GP=$(( PARTIPICATION_GP + LABORATORY_GP  + QUIZ_GP + EXAM_GP  ))
 
 # Consider making the output .md
 cat <<EOF
+
   Based upon the current grading of deliverables, the following is
   the breakdown of your current grade.
 
   Note that this current grade is only an estimate.
   I.e. Past performance does not predict future performance.
 
-                          Average           Weight
-  Participation ($PARTICIPATION_CALCULATION):          ${PARTICIPATION_AVERAGE}		${PARTICIPATION_WEIGHT}
-  Laboratory Assignments: ${LABORATORY_AVERAGE}		${LABORATORY_WEIGHT}
-  Quizzes (2):            ${QUIZ_AVERAGE}		(${QUIZ_WEIGHT})
-  Exams (2):              ${EXAM_AVERAGE}		(${EXAM_WEIGHT})
-  ----------              -------------
-  Weighted Total:         ${CURRENT_GP}
+                            Wieghted Average      Weight  Average
+  Participation ($PARTICIPATION_CALCULATION):  ${PARTICIPATION_GP}     ${PARTICIPATION_PERCENT}%      ${PARTICIPATION_AVERAGE}
+  Laboratory Assignments:   ${LABORATORY_GP}      ${LABORATORY_PERCENT}%     ${LABORATORY_AVERAGE}	
+  Quizzes (2):              ${QUIZ_GP}      ${QUIZ_PERCENT}%      ${QUIZ_AVERAGE}
+  Exams (2):                ${EXAM_GP}      ${EXAM_PERCENT}%      ${EXAM_AVERAGE}
+  ----------                -------------
+  Weighted Total:           ${CURRENT_GP}
 
 
 EOF
+
+
+
+# If .md, provide a break down of each section
