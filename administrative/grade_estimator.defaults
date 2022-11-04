@@ -1,0 +1,58 @@
+# This file contain the default grades for COMP122.
+#
+# A student can modify this file to provide their estimate
+# for a grade to an assignment that has NOT yet been 
+# graded or possibility NOT yet been graded.
+#
+# As the semester progresses, the importance of this file
+# diminishes, as actual grades are inserted.
+
+# The Syllabus has the following break down for scores
+# 
+# PARTICIPATION_WEIGHT=0.15
+ASSIGNMENT_00_total=75                          # Score for Participation
+  # At this time there are no individual assignments.
+  # If there are in the future, these scores are recorded as:
+  #   ASSIGNMENT_01_total=
+  #   ASSIGNMENT_02_total=
+  #   ...
+
+# LABORATORY_WEIGHT=0.40
+  # Each Section contains a number of deliverables.  The total number
+  # of deliverables is unknown. Hence, any value in this section will 
+  # be a rough estimate
+  #
+  # Section 1 Assignments: Models of Computation
+  #   ASSIGNMENT_11_total=
+  #   ASSIGNMENT_12_total=
+  #   ASSIGNMENT_13_total=
+  #   ...
+  #
+  # Section 2 Assignments: Formats and Encodings
+  #   ASSIGNMENT_21_total=
+  #   ASSIGNMENT_22_total=
+  #   ASSIGNMENT_23_total=
+  #   ...
+  #
+  # Section 3 Assignments: Digital Logic
+  #   ASSIGNMENT_31_total=
+  #   ASSIGNMENT_32_total=
+  #   ASSIGNMENT_33_total=
+  #   ...
+  #
+  # Section 4 Assignments: MIPS Programming
+  #   ASSIGNMENT_41_total=
+  #   ASSIGNMENT_42_total=
+  #   ASSIGNMENT_43_total=
+  #   ...
+
+
+# QUIZ_WEIGHT=0.15
+ASSIGNMENT_10_total=75                          # Quiz on the Models Section
+ASSIGNMENT_30_total=75                          # Quiz on the Digital Logic Section
+
+# EXAM_WEIGHT=0.30
+ASSIGNMENT_20_total=75                          # Exam on Formats and Encodings Section
+ASSIGNMENT_40_total=75                          # Exam on MIPs Programming Section
+
+
