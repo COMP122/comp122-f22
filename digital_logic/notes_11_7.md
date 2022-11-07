@@ -2,7 +2,9 @@
 
 ## Announcements
    1. 23-binary-addition graded and posted
-   1. Quiz schedule for this weekend possible delayed.
+      - I did not go searching for the assignment
+      - I provided a one hour buffer past the due date
+   1. Quiz schedule for this weekend possible delayed
       1. Monday-Morning class was cancelled
 
 ## Today's Agenda
@@ -14,10 +16,10 @@
       - Algebraic Transformation 
    1. Full Subtractor (well, yes, but No!)
 
-
 ## Questions
    1. M/W M: No Class
    1. M/W A:
+      - If I gave you a two day window to do the quiz during the week, would that present a problem for any one?
    1. T/R M: 
    1. T/R A:
 

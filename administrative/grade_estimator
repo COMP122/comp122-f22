@@ -85,53 +85,68 @@ done < <( find . -name grade.report -print )
 if [[ -z "$PARTICIPATION_SCORES" ]] ; then
   PARTICIPATION_SCORES=( )
    for i in 1 2 3 4 5 6 7 8 9 ; do
-     PARTICIPATION_SCORES+=( $( eval echo "\${ASSIGNMENTS_0${i}_total}" ) )  
+     PARTICIPATION_SCORES+=( $( eval echo "\${ASSIGNMENT_0${i}_total}" ) )  
    done
 fi
 
 # Collect the Laboratory Scores
 LABORATORY_SCORES=( )
    for i in 1 2 3 4 5 6 7 8 9 ; do
-     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENTS_1${i}_total}" ) )
-     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENTS_2${i}_total}" ) )
-     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENTS_3${i}_total}" ) )
-     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENTS_4${i}_total}" ) )
+     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENT_1${i}_total}" ) )
    done
+   for i in 1 2 3 4 5 6 7 8 9 ; do
+     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENT_2${i}_total}" ) )
+   done
+   for i in 1 2 3 4 5 6 7 8 9 ; do
+     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENT_3${i}_total}" ) )
+   done
+   for i in 1 2 3 4 5 6 7 8 9 ; do
+     LABORATORY_SCORES+=( $( eval echo "\${ASSIGNMENT_4${i}_total}" ) )
+   done
+
 
 # Collect the Quiz and Exam scores
 QUIZ_SCORES=( ${ASSIGNMENT_10_total} ${ASSIGNMENT_30_total} )
 EXAM_SCORES=( ${ASSIGNMENT_20_total} ${ASSIGNMENT_40_total} )
 
-
 # Calculate the Average in each section
-
-# For Participation Average, there are several ways to compute the participation
-# - if there are individual scores-- use them
-# - if there is a assigned default -- use it
-# - if the user is prompt for a value, and it is non zero, use it
-# - otherwise assign the participation to the average of the other scores
-if (( ${#PARTICIPATION_SCORES[@]} != 0 )) ; then 
-   PARTICIPATION_AVERAGE=$(average "${PARTIPATION_SCORES[@]}")
-   PARTICIPATION_CALCULATION=actual
-elif [[ -n "${ASSIGNMENT_00_total}" ]] && (( ${ASSIGNMENT_00_total} != 0 )) ; then
-   PARTICIPATION_AVERAGE=${ASSIGNMENT_00_total} 
-   PARTICIPATION_CALCULATION=default
-else
-   echo "Based upon self-evaluation, enter your participation score."
-   echo "Skip if you you want your participation score to be equal to the average of your other scores"
-   read -p "Participation (0 .. 100): "  X
-   PARTICIPATION_AVERAGE="$X"
-   PARTICIPATION_CALCULATION=entered
-fi
-if (( ${PARTICIPATION_AVERAGE} == 0 )) ; then 
-   PARTICIPATION_AVERAGE=$( average $LABORATORY_AVERAGE $QUIZ_AVERAGE $EXAM_AVERAGE )
-   PARTICIPATION_CALCULATION=averaged
-fi
-
 LABORATORY_AVERAGE=$(average "${LABORATORY_SCORES[@]}")
 QUIZ_AVERAGE=$(average "${QUIZ_SCORES[@]}")
 EXAM_AVERAGE=$(average "${EXAM_SCORES[@]}")
 
+
+# For Participation Average
+#   The Prof will be assigning a value for "participation" at the end of the semester
+#   Effectively, this value is stored in ASSIGNMENT_00_total
+#
+# To estimate the final score for this category, then ...
+# - if there is a assigned default use it and add it to the PARTICIPATION_SCORES.
+# - if the user is prompted for a value use it, and add it to the PARTICIPATION_SCORES
+# - otherwise add the average of the Labs, Quiz, Exams, and 
+
+if [[ -n "${ASSIGNMENT_00_total}" ]] ; then 
+   # Add the Student's default for Participation into the list of scores
+   PARTICIPATION_SCORES=( ${ASSIGNMENT_00_total}  ${PARTICIPATION_SCORES[@]} )
+   PARTICIPATION_CALCULATION=default
+else
+   # Prompt the Student to provide a default value
+   echo "Based upon self-evaluation, enter your participation score."
+   echo "Skip if you you want your participation score to be equal to the average of your other scores"
+   read -p "Participation (0..100): " ASSIGNMENT_00_total
+   if (( ${ASSIGNMENT_00_total} != 0 )) ; then 
+     PARTICIPATION_SCORES=( ${ASSIGNMENT_00_total} ${PARTICIPATION_SCORES[@]} )
+     PARTICIPATION_CALCULATION=prompted
+   fi
+fi
+
+if (( ${ASSIGNMENT_00_total} == 0 )) ; then 
+   # If the value is zero, use the average of the other categories as an estimate
+   PARTICIPATION_SCORES=( $( average $LABORATORY_AVERAGE $QUIZ_AVERAGE $EXAM_AVERAGE ) ${PARTICIPATION_SCORES[@]} )
+   PARTICIPATION_CALCULATION=averaged
+fi
+
+
+PARTICIPATION_AVERAGE=$(average "${PARTICIPATION_SCORES[@]}")
 
 # Syllabus Breakdown
 PARTICIPATION_PERCENT=15
@@ -149,25 +164,45 @@ EXAM_GP=$(( EXAM_AVERAGE * EXAM_PERCENT / 100 ))
 CURRENT_GP=$(( PARTIPICATION_GP + LABORATORY_GP  + QUIZ_GP + EXAM_GP  ))
 
 # Consider making the output .md
-cat <<EOF
+cat > "$(date +%b_%d).estimated_grade.md" <<EOF
+## Grade Estimation Tool
 
-  Based upon the current grading of deliverables, the following is
-  the breakdown of your current grade.
+This tool provides an estimiate of your current grade based upon a snapshot in time.
+This estimate is based upon the following information:
+   1. a set of user provided defaults (see "grade_estimator.defaults")
+   1. the current set of graded deliverables
+   1. a "guess" of the student's final participation value, said guess can be either
+      * default: a user provided defualt value (see "grade_estimator.defaults")
+      * prompted: value provided by the student via a prompt
+      * average: the average scores of laboratory assignments, quizzes, and exams
 
-  Note that this current grade is only an estimate.
-  I.e. Past performance does not predict future performance.
 
-                            Wieghted Average      Weight  Average
-  Participation ($PARTICIPATION_CALCULATION):  ${PARTICIPATION_GP}     ${PARTICIPATION_PERCENT}%      ${PARTICIPATION_AVERAGE}
-  Laboratory Assignments:   ${LABORATORY_GP}      ${LABORATORY_PERCENT}%     ${LABORATORY_AVERAGE}	
-  Quizzes (2):              ${QUIZ_GP}      ${QUIZ_PERCENT}%      ${QUIZ_AVERAGE}
-  Exams (2):                ${EXAM_GP}      ${EXAM_PERCENT}%      ${EXAM_AVERAGE}
-  ----------                -------------
-  Weighted Total:           ${CURRENT_GP}
+## Current Estimated Grade
 
+* Date Prepared: $(date)
+* Caveat: Past performance does not predict future performance. 
+
+
+|                                              | Average                  | Weight                     |Points            
+| :--------------------------------------------| -----------------------: | --------------------------:| ------------------: |
+|  Participation ($PARTICIPATION_CALCULATION): | ${EXAM_AVERAGE}          | ${PARTICIPATION_PERCENT}%  | ${PARTICIPATION_GP} |
+|  Laboratory Assignments:                     | ${QUIZ_AVERAGE}          | ${LABORATORY_PERCENT}%     | ${LABORATORY_GP}    |
+|  Quizzes:                                    | ${LABORATORY_AVERAGE}    | ${QUIZ_PERCENT}%           | ${QUIZ_GP}          |
+|  Exams:                                      | ${PARTICIPATION_AVERAGE} | ${EXAM_PERCENT}%           | ${EXAM_GP}          |
+|  **Total:**                                  |                          |                            | ${CURRENT_GP}       |
+
+|                                              | Scores                     | Count                       | Average                  |
+| :--------------------------------------------| -------------------------: | --------------------------: | -----------------------: |        
+|  Participation ($PARTICIPATION_CALCULATION): | ${PARTICIPATION_SCORES[@]} | ${#PARTICIPATION_SCORES[@]} | ${EXAM_AVERAGE}          |        
+|  Laboratory Assignments:                     | ${LABORATORY_SCORES[@]}    | ${#LABORATORY_SCORES[@]}    | ${QUIZ_AVERAGE}          |        
+|  Quizzes:                                    | ${QUIZ_SCORES[@]}          | ${#QUIZ_SCORES[@]}          | ${LABORATORY_AVERAGE}    |        
+|  Exams:                                      | ${EXAM_SCORES[@]}          | ${#EXAM_SCORES[@]}          | ${PARTICIPATION_AVERAGE} |        
+
+A Final Participation Score was provided via a $PARTICIPATION_CALCULATION value.
 
 EOF
 
 
 
-# If .md, provide a break down of each section
+open "$(date +%b_%d).estimated_grade.md"
+
