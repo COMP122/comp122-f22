@@ -1,4 +1,4 @@
-# COMP122 Lecture Notes: October 26 & 22, 2022
+# COMP122 Lecture Notes: Nov 2 & 3, 2022
 
 ## Announcements
    1. Starting new section
