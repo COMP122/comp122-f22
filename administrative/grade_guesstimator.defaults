@@ -1,0 +1,89 @@
+# This file contain the default grades for COMP122.
+#
+# A student can modify this file to provide their guesstimate
+# for a grade to an assignment that has NOT yet been 
+# graded or possibility NOT yet been graded.
+#
+# As the semester progresses, the importance of this file
+# diminishes, as actual grades are used in the calculations.
+
+# The Syllabus has the following break down for scores:
+
+PARTICIPATION_WEIGHT=0.15
+QUIZ_WEIGHT=0.15
+LABORATORY_WEIGHT=0.40
+EXAM_WEIGHT=0.30
+
+
+#####################################################################
+
+
+
+# PARTICIPATION SECTION
+  #  ASSIGNMENT_00_total=78    # A final value determined by the Prof at the END of the Semster
+  
+  # Via self-evaluation, you can assign a default value for ASSIGNMENT_00_total.
+  # 
+  #   For example, if you believe you are slight above average in 
+  #      1. attending class,
+  #      1. asking questions, etc., in class,
+  #      1. participating in Slack communications,
+  #      1. providing feedback by the feedback system,
+  #      1. turn in your assignments in on time,
+  #      1. etc., 
+  #  
+  #   You could associate a score of 78% for your participation.
+  #   Just uncomment the assignment of the variable "ASSIGNMENT_00_total" above, and provided it with a default value.
+  #
+  #   Assigning a value of "0" to this variable will then assign a value equal to the average of the following 
+  #      - the average of the Laboratory Scores
+  #      - the average of the Quiz Scores
+  #      - the average of the Exam Scores
+
+
+  # Section 0 Assignments:  Exercises, Assignments, and Activities
+  #   ASSIGNMENT_01_total=
+  #   ASSIGNMENT_02_total=
+  #   ASSIGNMENT_02_total=
+  #   ...
+
+
+# LABORATORY ASSIGNMENT SECTION
+  # Each subsection contains a number of deliverables.  The total number
+  # of deliverables is unknown. Hence, any value in this section will 
+  # be a rough guesstimate
+  #
+  # Section 1 Assignments: Models of Computation
+  #   ASSIGNMENT_11_total=
+  #   ASSIGNMENT_12_total=
+  #   ASSIGNMENT_13_total=
+  #   ...
+  #
+  # Section 2 Assignments: Formats and Encodings
+  #   ASSIGNMENT_21_total=
+  #   ASSIGNMENT_22_total=
+  #   ASSIGNMENT_23_total=
+  #   ...
+  #
+  # Section 3 Assignments: Digital Logic
+  #   ASSIGNMENT_31_total=
+  #   ASSIGNMENT_32_total=
+  #   ASSIGNMENT_33_total=
+  #   ...
+  #
+  # Section 4 Assignments: MIPS Programming
+  #   ASSIGNMENT_41_total=
+  #   ASSIGNMENT_42_total=
+  #   ASSIGNMENT_43_total=
+  #   ...
+
+
+# QUIZ SECTION
+ASSIGNMENT_10_total=70        # Set to your anticipated score on the Quiz for the Models Section
+ASSIGNMENT_30_total=70        # Set to your anticipated score on the Quiz for the Digital Logic Section
+
+# EXAM SECTION
+ASSIGNMENT_20_total=70        # Set to your anticipated score on the Exam for the Formats/Encodings Section
+ASSIGNMENT_40_total=70        # Set to your anticipated score on the Exam for the MIPs Section
+
+
