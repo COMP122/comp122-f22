@@ -77,7 +77,13 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 
 <h3 id="models">Models of Computation and Communication (Section 1)</h3>
 
-1. No explicit assignments
+
+1. Name: digital-logic
+   - Status: Assigned
+   - Invitation URL: https://classroom.github.com/a/0WcQVIj3
+   - Due: Friday Nov 11, 2022 @11:59 PM
+   - Repo Prefix: 31-digital-logic
+
 
 <h3 id="format">Format and Encoding (Section 2)</h3>
 
