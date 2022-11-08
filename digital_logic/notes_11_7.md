@@ -9,12 +9,13 @@
 
 ## Today's Agenda
    1. Combinational Logic
-      - build a 4-bit AL
+      - build a 4-bit ALU (Arithemtic and Logic Unit)
    1. Bitwise Opertions
    1. Full Adder via 
       - Product of Sums
       - Algebraic Transformation 
    1. Full Subtractor (well, yes, but No!)
+   1. BCD Adder
 
 ## Questions
    1. M/W M: No Class
