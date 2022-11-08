@@ -2,7 +2,8 @@
 
 ## Announcements
    1. 23-binary-addition graded and posted
-      - I did not go searching for the assignment
+      - I did not go searching for your submissiong
+        - your deliverable MUST have been in the submission.md file
       - I provided a one hour buffer past the due date
    1. Quiz schedule for this weekend possible delayed
       1. Monday-Morning class was cancelled
@@ -16,6 +17,10 @@
       - Algebraic Transformation 
    1. Full Subtractor (well, yes, but No!)
    1. BCD Adder
+   1. Start next slide deck
+      - Control Lines
+      - Decoders
+      - Multiplexers
 
 ## Questions
    1. M/W M: No Class
