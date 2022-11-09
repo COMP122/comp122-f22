@@ -2,10 +2,10 @@
 
 ## Announcements
    1. 23-binary-addition graded and posted
-      - I did not go searching for your submissiong
+      - I did not go searching for your submission
         - your deliverable MUST have been in the submission.md file
       - I provided a one hour buffer past the due date
-   1. Quiz schedule for this weekend possible delayed
+   1. Quiz scheduled for this weekend possible delayed
       1. Monday-Morning class was cancelled
 
 ## Today's Agenda
@@ -13,7 +13,7 @@
       - build a 4-bit ALU (Arithemtic and Logic Unit)
    1. Bitwise Opertions
    1. Full Adder via 
-      - Product of Sums
+      - Sums of Products
       - Algebraic Transformation 
    1. Full Subtractor (well, yes, but No!)
    1. BCD Adder
@@ -23,12 +23,15 @@
       - Multiplexers
 
 ## Questions
-   1. M/W M: No Class
    1. M/W A:
       - If I gave you a two day window to do the quiz during the week, would that present a problem for any one?
    1. T/R M: 
+      - If I gave you a two day window to do the quiz during the week, would that present a problem for any one?
    1. T/R A:
-
+      - If I gave you a two day window to do the quiz during the week, would that present a problem for any one?
+   1. M/W M: 
+      - If I gave you a two day window to do the quiz during the week, would that present a problem for any one?
+      - Is the last assignment going to be moved? No!
 
 ## Today's Material
 
