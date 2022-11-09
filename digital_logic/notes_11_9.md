@@ -1,4 +1,4 @@
-# COMP122 Lecture Notes: Nov 7 & 8, 2022
+# COMP122 Lecture Notes: Nov 9 & 10, 2022
 
 ## Announcements
    1. Quiz is scheduled for the weekend of 17th
