@@ -52,11 +52,14 @@ function average () {
   fi
 }
 
-# Algorithm:
+## Algorithm:
 #   1. source the grade_guesstimator.defaults
 #      1. to assign the weights for each section
 #      1. to assigned  default grades for deliverables that have not been assigned
-#   1. source all the available "grade.report"s
+#   1. Apply all of the ASSIGNMENT_xx_total Env Vars
+#      1. locate all of the grade.report"s
+#      1. extract the total value which is assigned to an Env Var, e.g., ASSIGNMENT_xx_total
+#      1. add the values of these env variables to the current environment.
 #   1. collect individual scores into category scores
 #      1. Participation Scores:
 #         * Note the final (ASSIGNMENT_00_total) is determined at the end of the semester
@@ -80,6 +83,15 @@ function average () {
 #   1. Perform a weighted sum of all the sectional scores
 #   1. Emit a report 
 
+## File Names
+#    1. grade_guesstimator
+#    1. grade_guesstimator.defaults
+#    1. grade_guesstimator.md
+#    1. grade_guesstimator.md
+#    1. bbb_dd.guesstimated_grade.md
+#    1. .grade_list
+
+
 # Source the default grade assignment
 if [[ -f grade_guesstimator.defaults ]] ; then
   source grade_guesstimator.defaults
@@ -87,8 +99,9 @@ fi
 
 # Source each grade.report
 while read _grade_report ; do
-    source $_grade_report
-done < <( find . -name grade.report -print )
+    grep "ASSIGNMENT_\.*=" $_grade_report
+done < <( find . -name grade.report -print ) >> .grade_list
+source .grade_list
 
 
 
@@ -213,8 +226,6 @@ This guesstimate is based upon the following information:
 
 
 EOF
-
-
 
 open "$(date +%b_%d).guesstimated_grade.md"
 
