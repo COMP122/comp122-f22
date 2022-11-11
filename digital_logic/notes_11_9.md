@@ -17,8 +17,11 @@
 
 ## Questions
    1. M/W A:
-   1. T/R M: 
+      - none
+   1. T/R M:
+      - none: 
    1. T/R A:
+      - 
    1. M/W M: 
 
 
