@@ -71,8 +71,5 @@
 
 ## Notes
 
-ajsd;lfj
-
-asldkfjlkjadfs
 
 
