@@ -41,22 +41,58 @@
 
 
 ## Today's Agenda
-   1. State
-      - Time and State
-      - Set and Reset of State
-      - RS and D Latches
-      - Latches / FlipFlops
-   1. MicroArchitecture
+   1. Review of where we are:
+      - 41-echo
+      - 42-kickstart
+      - 43-binary32
+   1. Review of MIPs
+   1. Binary32
+      - overview
+      - subroutine overview (43-binary32)
+        * Theoretical Input
+          - 1 .1 0100 1110 0001  x2^   - 101001
 
+        * Formal Parameters:
+          - a0: sign (0: positive, 1: negative), e.g. 0
+          - a1: whole (always 1)
+          - a2: fractional part, e.g. 5354
+          - a3: exponent (unbiased),  -41
+          - v0: the encoded binary32 value
+
+        * Algorithm:
+          1. demarshal your input args
+          1. ~encode the sign~ (done)
+          1. ~drop the leading 1~ (done)
+          1. add the bias to the exponent
+          1. shift the pieces into place
+          1. merge the pieces together
+          1. call print_t to print the value
+          1. marshal your output arg
+          1. return 
+             - \# this will cause an interrupt
+             - ignore for now
+
+      - Final spec to be provided later
+        * Above is Phase 1
+
+   1. Lab time:
+      - create a file called "encode_binary32.s"
+      - create a subroutine called "encode_binary32"
+      - use the template to structure your subroutine
+      - write the three-address (TAC) code first
+      - convert the TAC into MIPS
+      - debug 
+        - manual add your values into the $a0..$a3 registers
+
+    1. mips_subroutine tool
+       - to be provided
 
 ## Questions
-   1. M/W A:
-      - none
-   1. T/R M:
-      - none: 
-   1. T/R A:
-      - 
    1. M/W M: 
+   1. M/W A:
+   1. T/R M:
+   1. T/R A:
+
 
 
 ## Today's Material

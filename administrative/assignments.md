@@ -19,20 +19,21 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Repo Prefix: 10-quiz-models
 
 1. Exam 2: Formats and Encodings
-   - Status: Announced
+   - Status: Pending
    - Invitation URL:
    - Due:   10/24 & 10/25 -- at the end of lecture/lab
    - Additional Information:
-   - Repo Prefix: 20-formats
+   - Repo Prefix: 20-exam-formats
 
 1. Quiz 3: Digital Logic
-   - Status: 
+   - Status: Assigned
    - Invitation URL: 
-   - Due: 
+   - Due: Weekend of Nov 18th
    - Additional Information:
+     - you will be provide 2hours to complete
    - Repo Prefix: 30-quiz-digital-logic
 
-1. Exam #4: MIPS Assembly Language
+1. Exam 4: MIPS Assembly Language
    - Status:
    - Invitation URL: 
    - Due: -- at the end of lecture/lab
@@ -72,6 +73,13 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Due: Sep 22, 2022, 4:00 PM
    - Additional Information
       - See Slack for instructions
+
+1. Practice Quiz
+   - Status: Credit / No Credit (Participation)
+   - Invitation URL: https://classroom.github.com/a/tNkfBgBm
+   - Due: Friday Sept 25, 2022 @11:59 PM
+   - Additional Information:
+     - no grade report
 
 ---
 
@@ -124,22 +132,22 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 1. Name: digital-logic
    - Status: Graded
    - Invitation URL: 
-   - Due: 
+   - Due: Friday Nov 11, 2022, @11:59 PM
    - Repo Prefix: 31-digital-logic
 
 ---
 <h3 id="mips">MIPS Encoding (Section 4)</h3>
 
-1. Name: 
+1. Name: Command Line Echo
    - Status: Released
    - Invitation URL: https://classroom.github.com/a/HIzjhCrn
-   - Due: Sunday, 9 October 1922 @11:59PM
+   - Due: Sunday, October 9, 2022 @11:59PM
    - Repo Prefix: 41-echo
 
-1. Name: 
-   - Status: 
-   - Invitation URL:
-   - Due:
-   - Repo Prefix: 
+1. Name: Kickstart in MIPS
+   - Status: Released
+   - Invitation URL: https://classroom.github.com/a/81i2qleF
+   - Due: Tuesday, Oct 18, 2022 @11:59
+   - Repo Prefix: 42-kickstart
    
  
