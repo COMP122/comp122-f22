@@ -1,4 +1,9 @@
-# COMP122 Lecture Notes: Nov 14 and 15, 2022
+# COMP122 Lecture Notes: Nov 14, 2022
+
+##  These notes are specifically for the Monday/Afternoon class
+   1. The subroutine "encode_binary32" has a technical flaw in it
+   1. This flaw will be discussed on Nov 15
+   1. This flaw DOES NOT prevent you from working on the assignment!
 
 
 ## Announcements
@@ -49,27 +54,23 @@
       - overview
       - subroutine overview (43-binary32)
         * Theoretical Input
-          -  "+ 1 .1 0100 1110 0001  x2^  - 10 1001"
+          -  "+ 1 .1 0100 1110 0001  x2^  - 101001"
 
         * Actual Inputs:
-          -  '+'  0x0x34E0   ~x2^~   '-'   41   ( "+" 0x0x34E0 - 41)
-          -  a0   a1         -----   a2    a3
-
+          -  0  1  5344 ~x2^~ -41
+          -  a0 a1 a2         a3
 
         * Formal Parameters:
-          - a0: sign (an ASCII charactor)
-          - a1: unsigned number (in fixpoint:  1.\<mantissa\>) 
-          - a2: sign of the exponent (an ASCII character)
-          - a3: unsigned exponent (unbiased),  41
+          - a0: sign (0: positive, 1: negative), e.g. 0
+          - a1: whole (always 1)
+          - a2: fractional part, e.g., 5354
+          - a3: exponent (unbiased),  -41
           - v0: the encoded binary32 value
 
         * Algorithm:
           1. demarshal your input args
-          1. decode and then encode the sign
-          1. left justify the number (putting the fix point in the right place)
-             - use the 'pos_msb' macro to determine 
-             - shift the number to the left, while also dropping the leading 1
-          1. decode the sign of the exponent and then reencode the exponent
+          1. ~encode the sign~ (done)
+          1. ~drop the leading 1~ (done)
           1. add the bias to the exponent
           1. shift the pieces into place
           1. merge the pieces together
@@ -94,21 +95,6 @@
     1. mips_subroutine tool
        - to be provided
 
-    1. macro to determine the position of the most significant bit
-
-    ```mips
-    .macro pos_msb(%reg)
-             move $a0, 0             #        counter = 0
-             move $a1, %reg          #        number = %reg
-       loop: beq $a1, $zero, done    # loop:  for(; number != zero ;)
-               addi $a0, $a0, 1      #           counter ++
-               srl $a1, $a1, 1       #           number = number >> 1
-             b loop                  #           break loop;
-       done: nop                     # done:  nop
-             move $v0, $a0           #        $v0 = counter
-    .end_macro
-    ```
-
 ## Questions
    1. M/W M: 
       - no questions
@@ -125,8 +111,7 @@
 ---
 ## Resources
    1. Slides:
-      - Intro to MIPS:
-      - https://docs.google.com/presentation/d/13NbmMDsDcbJ6qLznOublbubldTsf4qAPr2wl8Ip1KDE/edit#slide=id.gfba52f9b0c_0_217
+      * State and MicroArchecture: https://docs.google.com/presentation/d/1fiKqQJ8tik9L4aVuD_QYIuWPIkTQBGgARH9uZGCP-Fs/edit#slide=id.gc7bbf9a6da_0_0
 
 
 ## Notes
