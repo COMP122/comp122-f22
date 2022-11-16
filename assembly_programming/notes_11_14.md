@@ -65,36 +65,35 @@
       - Review of binary32 encoding format
       - subroutine overview:  "encode_binary32" 
         * Example: Theoretical Input
-          - "+ 1.1 0100 1110 0001  x2^  - 10 1001"
+          - "+ 1.1 0100 1110 0001  x2^ - 10 1001 (-41)"  
 
         * Example: Actual Inputs:
-          -   '+'  "2# 1 1 0100 1110 0001"  "x2^"   '-'    "41"   
-          - ( '+', 0x34E0, '-', 41)  
+          - Breakdown of   '+'  "2# 1 1 0100 1110 0001"  "x2^"   '-'    "2# 10 1001"   
+          - ( '+', 0x34E1, '-', 0x29)  
 
         * Prototype:  encode_binary32( sign, num, expon_sign, expon )
         * Formal Parameters:
-          - a0: sign -- an ASCII charactor
-          - a1: num (representing in total:  1.\<mantissa\>) 
+          - a0: sign -- an ASCII character
+          - a1: number (representing, in total,:  1.\<mantissa\>) 
           - a2: expon_sign -- an ASCII character
           - a3: exponent (unbiased)
           - v0: the encoded binary32 value
 
         * Algorithm:
-          1. demarshal your input arguments
-          1. decode and then encode the sign
-          1. reposition the number to drop the leading 1, and left justify the mantissa 
-             - use the 'position_of_msb' macro to determine 
-             - shift the number to the left, while also dropping the leading 1
+          1. Demarshal your input arguments
+          1. Decode and then encode the sign
+          1. Obtain the mantissa, by left-justifying the number while dropping the leading 1
+             - shift the number to the left the appropriate number of positions
+             - use the `position_of_msb` macro to determine this number 
+          1. Decode the sign of the exponent and then re-encode the exponent
+          1. Add the bias to the exponent
+          1. Shift the pieces into place: sign, exponent, mantissa
+          1. Merge the pieces together
+          1. Call `print_t` to print the value as a bit"t" string
+          1. Marshal your output arguments 
+          1. Return from the subroutine `jr $ra`
+             - Note, as explained in class, the return will when using MARS -- that is Okay
 
-          1. decode the sign of the exponent and then re-encode the exponent
-          1. add the bias to the exponent
-          1. shift the pieces into place
-          1. merge the pieces together
-          1. call print_t to print the value
-          1. marshal your output arg
-          1. return 
-             - \# this will cause an interrupt
-             - ignore for now
 
       - Final spec to be provided later
         * Above is Phase 1
@@ -108,23 +107,23 @@
       - debug 
         - manual add your values into the $a0..$a3 registers
 
-    1. mips_subroutine tool
-       - to be provided
+   1. mips_subroutine tool
+      - to be provided
 
-    1. macro to determine the position of the most significant bit
+   1. macro to determine the position of the most significant bit
 
-    ```mips
-    .macro position_of_msb(%reg)
-                move $a0, 0             #        counter = 0;
-                move $a1, %reg          #        number = %reg;
-          loop: beq $a1, $zero, done    # loop:  for(; number != zero ;) {
-                  addi $a0, $a0, 1      #           counter ++
-                  srl $a1, $a1, 1       #           number = number >> 1;
-                b loop                  #           break loop;
-                                        #        }
-          done: nop                     # done:  nop
-                move $v0, $a0           #        $v0 = counter;
-       .end_macro
+   ```mips
+   .macro position_of_msb(%reg)
+              li $a0, 0                #        counter = 0;
+              move $a1, %reg           #        number = %reg;
+        loop: beq $a1, $zero, done     # loop:  for(; number != zero ;) {
+                addi $a0, $a0, 1       #           counter ++;
+                srl $a1, $a1, 1        #           number = number >> 1;
+              b loop                   #           break loop;
+                                       #        }
+        done: nop                      # done:  nop
+              move $v0, $a0            #        $v0 = counter;
+    .end_macro
     ```
 
 
