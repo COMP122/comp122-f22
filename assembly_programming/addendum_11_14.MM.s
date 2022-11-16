@@ -67,7 +67,7 @@ encode_binary32: nop
                 # Shift the pieces into place: sign, exponent, mantissa
                 sign = sign << 31 ;
                 expon = expon << 23  ;
-                mantissa = mantissa >> 9 ;   / 1 + 8
+                mantissa = mantissa >> 9 ;   // 1 + 8
  
                 # Merge the pieces together
                 final = sign | expon | mantissa;
