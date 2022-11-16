@@ -2,8 +2,8 @@
 
 
 ## Announcements
-   1. Assignment:  24-binary32 released
-      - due: Tuesday, Nov 22, 2022  (bonus of 10 points)
+   1. Assignment:  43-binary32 released
+      - due: Tuesday, Nov 22, 2022
       - spec was updated after lecture
 
    1. Program:  mars-mips/bin/mips_subroutine
