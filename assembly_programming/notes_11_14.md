@@ -50,11 +50,13 @@
     
 ## Questions
    1. M/W M: 
+      - question on strategy to apply to simplify Boolean expression
    1. M/W A:
       - no questions
    1. T/R M:
       - no questions
    1. T/R A:
+      - no questions
 
 
 
@@ -71,7 +73,7 @@
           - Breakdown of   '+'  "2# 1 1 0100 1110 0001"  "x2^"   '-'    "2# 10 1001"   
           - ( '+', 0x34E1, '-', 0x29)  
 
-        * Prototype:  encode_binary32( sign, num, expon_sign, expon )
+        * Prototype:  encode_binary32( sign, number, expon_sign, expon )
         * Formal Parameters:
           - a0: sign -- an ASCII character
           - a1: number (representing, in total,:  1.\<mantissa\>) 
