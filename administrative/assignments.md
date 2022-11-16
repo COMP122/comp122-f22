@@ -149,5 +149,10 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Invitation URL: https://classroom.github.com/a/81i2qleF
    - Due: Tuesday, Oct 18, 2022 @11:59
    - Repo Prefix: 42-kickstart
-   
+
+1. Name: Binary32
+   - Status: Released
+   - Invitation URL: https://classroom.github.com/a/Kbb7BSRY
+   - Due: Tuesday, Nov 22, 2022 @11:59
+   - Repo Prefix: 43-binary32
  
