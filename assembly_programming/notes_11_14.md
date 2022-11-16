@@ -45,31 +45,48 @@
       - 42-kickstart
       - 43-binary32
    1. Review of MIPs
-   1. Binary32
-      - overview
-      - subroutine overview (43-binary32)
-        * Theoretical Input
-          -  "+ 1 .1 0100 1110 0001  x2^  - 10 1001"
+   1. Binary32 Program Overview, and Coding Practicum
+  
+    
+## Questions
+   1. M/W M: 
+   1. M/W A:
+      - no questions
+   1. T/R M:
+      - no questions
+   1. T/R A:
 
-        * Actual Inputs:
-          -  '+'  0x0x34E0   ~x2^~   '-'   41   ( "+" 0x0x34E0 - 41)
-          -  a0   a1         -----   a2    a3
 
 
+## Today's Material
+
+
+ 1. Binary32 Program Overview, and Coding Practicum
+      - Review of binary32 encoding format
+      - subroutine overview:  "encode_binary32" 
+        * Example: Theoretical Input
+          - "+ 1.1 0100 1110 0001  x2^  - 10 1001"
+
+        * Example: Actual Inputs:
+          -   '+'  "2# 1 1 0100 1110 0001"  "x2^"   '-'    "41"   
+          - ( '+', 0x34E0, '-', 41)  
+
+        * Prototype:  encode_binary32( sign, num, expon_sign, expon )
         * Formal Parameters:
-          - a0: sign (an ASCII charactor)
-          - a1: unsigned number (in fixpoint:  1.\<mantissa\>) 
-          - a2: sign of the exponent (an ASCII character)
-          - a3: unsigned exponent (unbiased),  41
+          - a0: sign -- an ASCII charactor
+          - a1: num (representing in total:  1.\<mantissa\>) 
+          - a2: expon_sign -- an ASCII character
+          - a3: exponent (unbiased)
           - v0: the encoded binary32 value
 
         * Algorithm:
-          1. demarshal your input args
+          1. demarshal your input arguments
           1. decode and then encode the sign
-          1. left justify the number (putting the fix point in the right place)
-             - use the 'pos_msb' macro to determine 
+          1. reposition the number to drop the leading 1, and left justify the mantissa 
+             - use the 'position_of_msb' macro to determine 
              - shift the number to the left, while also dropping the leading 1
-          1. decode the sign of the exponent and then reencode the exponent
+
+          1. decode the sign of the exponent and then re-encode the exponent
           1. add the bias to the exponent
           1. shift the pieces into place
           1. merge the pieces together
@@ -97,28 +114,18 @@
     1. macro to determine the position of the most significant bit
 
     ```mips
-    .macro pos_msb(%reg)
-             move $a0, 0             #        counter = 0
-             move $a1, %reg          #        number = %reg
-       loop: beq $a1, $zero, done    # loop:  for(; number != zero ;)
-               addi $a0, $a0, 1      #           counter ++
-               srl $a1, $a1, 1       #           number = number >> 1
-             b loop                  #           break loop;
-       done: nop                     # done:  nop
-             move $v0, $a0           #        $v0 = counter
-    .end_macro
+    .macro position_of_msb(%reg)
+                move $a0, 0             #        counter = 0;
+                move $a1, %reg          #        number = %reg;
+          loop: beq $a1, $zero, done    # loop:  for(; number != zero ;) {
+                  addi $a0, $a0, 1      #           counter ++
+                  srl $a1, $a1, 1       #           number = number >> 1;
+                b loop                  #           break loop;
+                                        #        }
+          done: nop                     # done:  nop
+                move $v0, $a0           #        $v0 = counter;
+       .end_macro
     ```
-
-## Questions
-   1. M/W M: 
-      - no questions
-   1. M/W A:
-   1. T/R M:
-   1. T/R A:
-
-
-
-## Today's Material
 
 
 
