@@ -9,7 +9,7 @@
       - all should have been requested last week, but ...
       - all MUST be in Tuesday, Nov 22, 2022 @ 11:59
       - you must follow the process as defined in the previous announcement
-        * i.e., on Nov 14 and 16
+        * i.e., the process is enumerated within Nov 14 and 15 notes.
 
    1. Assignment: 44-reverse-string being prepared
       - Write three Java programs, using JAVA TAC
@@ -34,7 +34,7 @@
       - Memory Operations
       - While loop
       - If-then-else
-   1; strchr in Java (slides)
+   1. strchr in Java (slides)
    1. Time for Lab / Questions
   
 ## Questions
