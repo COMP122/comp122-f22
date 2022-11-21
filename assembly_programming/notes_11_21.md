@@ -13,7 +13,9 @@
           - prints a string in reverse -- starting from c
         * String A strrcpy(String A, String B, char c)
           - copies string B in reverse onto A
+
    1. W/R: No class --- Thursday is thanksgiving
+
    1. M/T: 
       - Tuesday Morning -- no, class: Prof is otherwise occupied
       - Tuesday Afternoon -- under advisement
@@ -46,7 +48,7 @@
    ```
 
    
-1. strchr:
+1. strchr: locate a character within a string
    - practicum   
 
 1. Memory Operations:
@@ -97,7 +99,9 @@
 ---
 ## Resources
    * ![Memory Alignment](https://docs.google.com/spreadsheets/d/1iweUQVFsHa2tF6ETj5bGEEjKRG5sp9eGgeLJ2OEx3sU/edit#gid=0)
+   
    * TAC2MIPS.md
+
    * ![String Processing](https://docs.google.com/presentation/d/1fg9BuWtyZ9PARK0gDE5ZcbjOiudRSrVP2s1iuSIDYXw/edit#slide=id.g199d0a137fe_0_29)
  
 
