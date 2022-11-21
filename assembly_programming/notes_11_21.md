@@ -28,13 +28,13 @@
 
 
 ## Today's Agenda
-   1. Memory and Alignment (notes & slide)
-   1. strchr in Java (notes)
-   1. TAC: 
-      - Memory Operations
-      - While loop
-      - If-then-else
-   1. strchr in Java (slides)
+   ~1. Memory and Alignment (notes & slide)~
+   ~1. strchr in Java (notes)~
+   ~1. TAC: ~
+   ~   - Memory Operations~
+   ~   - While loop~
+   ~   - If-then-else~
+   ~1. strchr in Java (slides)~
    1. Time for Lab / Questions
   
 ## Questions
