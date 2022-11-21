@@ -38,8 +38,17 @@ encode_binary32: nop     # binary32 = encode_binary32(sign, number, expon_sign, 
         move $t3, $a3
 
         # 1. decode and then encode the sign
-        if ( sign == "+") { sign = 0;}
-        if ( sign == "-") { sign = 1;}
+        
+        li $t2, 42
+        li $t3, 0x2A  #       10 1010
+        li $t4, '*'   
+
+        bne $t5, '+', skip     # if ( sign == '+') { sign = 0;}
+           li $t5, 0
+ skip: nop
+
+        
+        if ( sign == '-') { sign = 1;}
 
         # 1. reposition the number to drop the leading 1, and left justify the mantissa 
         #    - use the 'position_of_msb' macro to determine 

@@ -4,7 +4,7 @@
 ## Announcements
    1. Assignment:  43-binary32 released
       - due: Tuesday, Nov 22, 2022  @ 11:59 PM
-      - spec was updated after lecture
+      - spec was updated after lecture on Tuesday
 
    1. Program:  mars-mips/bin/mips_subroutine
       - you must perform a `git pull`

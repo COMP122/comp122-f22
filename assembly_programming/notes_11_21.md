@@ -5,7 +5,13 @@
    1. Assignment: 43-binary32 released
       - due: Tuesday, Nov 22, 2022  @ 11:59 PM
 
-   1. Assignment: 44-reverse_string being prepared
+   1. Regrade Considerations of: 23-, 24-, 25-, 31- 
+      - all should have been requested last week, but ...
+      - all MUST be in Tuesday, Nov 22, 2022 @ 11:59
+      - you must follow the process as defined in the previous announcement
+        * i.e., on Nov 14 and 16
+
+   1. Assignment: 44-reverse-string being prepared
       - Write three Java programs, using JAVA TAC
         * int strchr(String A, char c): 
           - locate a character within a string
