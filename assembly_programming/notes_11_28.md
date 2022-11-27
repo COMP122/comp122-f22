@@ -1,40 +1,38 @@
-# COMP122 Lecture Notes: Nov 21 and 22, 2022
+# COMP122 Lecture Notes: Nov 27 and 28, 2022
 
 
 ## Announcements
-   1. Assignment: 43-binary32 released
+   1. Assignment: 43-binary32 past due.
       - due: Tuesday, Nov 22, 2022  @ 11:59 PM
 
-   1. Regrade Considerations of: 23-, 24-, 25-, 31- 
-      - all should have been requested last week, but ...
-      - all MUST be in Tuesday, Nov 22, 2022 @ 11:59
-      - you must follow the process as defined in the previous announcement
-        * i.e., the process is enumerated within Nov 14 and 15 notes.
+   1. Assignment: 44-reverse-string-javea
+      - Write three Java subroutines, using JAVA (simplified or TAC)
+        * int strchr(char[] A, char c): 
+          - locate a character within a ~~string~~ character array
+        * int strrev(char[] A, char c): 
+          - prints a ~~string~~ character array in reverse -- starting from c
+        * char[] strrcpy(char[] A, char[] B, char c)
+          - copies ~~string~~ array B in reverse onto the end of A
 
-   1. Assignment: 44-reverse-string being prepared
-      - Write three Java programs, using JAVA TAC
-        * int strchr(String A, char c): 
-          - locate a character within a string
-        * int strrev(String A, char c): 
-          - prints a string in reverse -- starting from c
-        * String A strrcpy(String A, String B, char c)
-          - copies string B in reverse onto A
-
-   1. W/R: No class --- Thursday is thanksgiving
-
-   1. M/T: 
-      - Tuesday Morning -- no, class: Prof is otherwise occupied
-      - Tuesday Afternoon -- under advisement
+   1. Assignment: 45-reverse-string-mips
+      - Write three MIPS subroutines
+        * int strchr(char* A, char c): 
+          - locate a character within a ~~string~~ character array
+        * int strrev(char* A, char c): 
+          - prints a string character array in reverse -- starting from c
+        * char* strrcpy(char* A, char* B, char c)
+          - copies string B in reverse onto the end of A
+          - presume 
 
 
 ## Today's Agenda
-   ~~1. Memory and Alignment (notes & slide)~~
-   ~~1. strchr in Java (notes)~~
-   ~~1. TAC:~~
-        ~~- Memory Operations~~
-        ~~- While loop~~
-        ~~- If-then-else~~
-   ~~1. strchr in Java (slides)~~
+   1. Memory and Alignment (notes & slide)
+   1. strchr in Java (notes)
+   1. TAC:
+        - Memory Operations
+        - While loop
+        - If-then-else
+   1. strchr in Java (slides)
    1. Time for Lab / Questions
   
 ## Questions
