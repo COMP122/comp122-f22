@@ -1,10 +1,10 @@
-# COMP122 Lecture Notes: Nov 27 and 28, 2022
+# COMP122 Lecture Notes: Nov 28 and 29, 2022
 
 
 ## Announcements
    1. We are fast approaching the end of the semester
       - stay tuned for information about Exam #4
-      
+
    1. Assignment: 44-reverse-string-javea
       - Write three Java subroutines, using JAVA (simplified or TAC)
         * int strchr(char[] A, char c): 
