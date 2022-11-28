@@ -2,9 +2,9 @@
 
 
 ## Announcements
-   1. Assignment: 43-binary32 past due.
-      - due: Tuesday, Nov 22, 2022  @ 11:59 PM
-
+   1. We are fast approaching the end of the semester
+      - stay tuned for information about Exam #4
+      
    1. Assignment: 44-reverse-string-javea
       - Write three Java subroutines, using JAVA (simplified or TAC)
         * int strchr(char[] A, char c): 
