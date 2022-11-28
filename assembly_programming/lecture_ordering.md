@@ -4,7 +4,6 @@
 
 ## Lecture Order
   1. Intro to MIPS
-  1. Intro to Control Flow
-  1. Instructions, Arrays, Stack, and Frames
-  1. Subroutine Construction
-  1. Base64: Operations  ?
+  1. Memory Alignment
+  1. String Processing
+  1. Subroutine Processing

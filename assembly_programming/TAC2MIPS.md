@@ -18,6 +18,7 @@ Given a simplied Java psuedo code for a method that has been transformed into Th
    | TAC Instruction               | MIPS Instruction          |
    |-------------------------------|---------------------------|
    | `;`                           | `nop`                     |
+   | `a ++;`                       | `addi a, a, 1`            |
    | `x = [ a \| imm ];`           | `move x, a \| li x, imm`  |
    | `x = a [ + \| - ] b;`         | `add x, a, b     # etc`   |
    | `x = a [ + \| - ] imm;`       | `addi x, a, imm  # etc`   |
