@@ -5,7 +5,7 @@
    1. We are fast approaching the end of the semester
       - stay tuned for information about Exam #4
 
-   1. Assignment: 44-reverse-string-javea
+   1. Assignment: 44-reverse-string-java
       - Write three Java subroutines, using JAVA (simplified or TAC)
         * int strchr(char[] A, char c): 
           - locate a character within a ~~string~~ character array
@@ -19,7 +19,7 @@
         * int strchr(char* A, char c): 
           - locate a character within a ~~string~~ character array
 
-      - Write two additional MIPS subroutine
+      - Write two additional MIPS subroutines
         * int strrev(char* A, char c): 
           - prints a string character array in reverse -- starting from c
         * char* strrcpy(char* A, char* B, char c)
@@ -39,6 +39,7 @@
   
 ## Questions
    1. M/W M: 
+      - none
    1. M/W A:
    1. T/R M:
    1. T/R A:
@@ -85,7 +86,8 @@
           }                   
           else { 
     alt:    ;                                
-                                 
+            // <body>
+                     
             // break skip;              
           }                  
     skip: ; 
@@ -97,7 +99,8 @@
 
              continue loop;
            }
-   ```
+    done:  ;
+    ```
 
 
 
