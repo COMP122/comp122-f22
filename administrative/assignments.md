@@ -155,4 +155,17 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Invitation URL: https://classroom.github.com/a/Kbb7BSRY
    - Due: Tuesday, Nov 22, 2022 @11:59
    - Repo Prefix: 43-binary32
+
+1. Name: Character Arrays in Java
+   - Status: Released
+   - Invitation URL: https://classroom.github.com/a/8kugKsJr
+   - Due: Friday, Dec 2 23:59:59
+   - Repo Prefix: 44-char-array-java
+
+ 1. Name: Strings in MIPS
+   - Status: Introduced
+   - Invitation URL: 
+   - Due: Sunday, Dec 4 23:59:59 (part 1)
+   - Due: TBD (part 2 & 3)
+   - Repo Prefix: 45-strings-mips
  
