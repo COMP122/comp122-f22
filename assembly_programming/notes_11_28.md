@@ -47,6 +47,8 @@
    1. T/R M:
       - none
    1. T/R A:
+      - none
+      
 
 
 ## Today's Material
