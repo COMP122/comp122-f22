@@ -163,9 +163,9 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Repo Prefix: 44-char-array-java
 
  1. Name: Strings in MIPS
-   - Status: Introduced
-   - Invitation URL: 
+   - Status: Released
+   - Invitation URL: https://classroom.github.com/a/c7LBSDt_
    - Due: Sunday, Dec 4 23:59:59 (part 1)
-   - Due: TBD (part 2 & 3)
+   - Due: Tuesday, Dec 6, 23:59:59 (part 2 & 3)
    - Repo Prefix: 45-strings-mips
  
