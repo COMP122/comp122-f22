@@ -17,14 +17,15 @@
 
 ## Today's Agenda
    1. Stack Operations
-   1. Frames and Recursion
+   1. Frames
    1. Subroutine and Macros
    1. First Reading of: Subroutine Transitioning
 
 
   
 ## Questions
-   1. M/W M: 
+   1. M/W M:
+      - none 
    1. M/W A:
    1. T/R M:
    1. T/R A:
@@ -58,9 +59,9 @@
    # index = strchr(A, c);
    push_args $t0, $t1         # Marshal the actual arguments
    push_t_registers           # Save my T registers
-   push $ra, $sp, $fp         # Save my return address, and my frame information              
+   push $ra, $sp, $fp         # Save return address,and my frame information              
    jal strchr                 
-   pop $ra, $sp
+   pop $ra, $sp, $fp
    pop_t_registers
    pop_results $t2
    ```
