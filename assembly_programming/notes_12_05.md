@@ -2,7 +2,7 @@
 
 
 ## Announcements
-   1. W/R is the inclass exam for the Assembly Language section
+   1. W/R is the inclass exam for the Assembly Language Section
       - Will you be required to write code?
         * Yes, in the form of code snippets, e.g., macros
 
@@ -20,7 +20,18 @@
 
   
 ## Questions
-   1. M/W M:
+   1. M/W M: 
+      - What are the S registers for?
+      - How do you get the length of the string?
+      - How do you create an array
+        ```mips
+            .data
+            .align 2
+        R:  .space 256
+
+            .text
+        ```
+
    1. M/W A:
    1. T/R M:
    1. T/R A:
@@ -57,6 +68,7 @@
          1. compute
          1. cleanup
 
+   * See addendum files...
 
 ---
 ## Resources
@@ -66,6 +78,19 @@
  
 
 ## Notes
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
