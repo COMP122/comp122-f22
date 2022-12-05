@@ -19,14 +19,14 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Repo Prefix: 10-quiz-models
 
 1. Exam 2: Formats and Encodings
-   - Status: Pending
+   - Status: Graded
    - Invitation URL:
    - Due:   10/24 & 10/25 -- at the end of lecture/lab
    - Additional Information:
    - Repo Prefix: 20-exam-formats
 
 1. Quiz 3: Digital Logic
-   - Status: Assigned
+   - Status: Graded
    - Invitation URL: 
    - Due: Weekend of Nov 18th
    - Additional Information:
@@ -87,7 +87,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 
 
 1. Name: digital-logic
-   - Status: Assigned
+   - Status: Graded
    - Invitation URL: https://classroom.github.com/a/0WcQVIj3
    - Due: Friday Nov 11, 2022 @11:59 PM
    - Repo Prefix: 31-digital-logic
@@ -139,15 +139,15 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 <h3 id="mips">MIPS Encoding (Section 4)</h3>
 
 1. Name: Command Line Echo
-   - Status: Released
+   - Status: Graded
    - Invitation URL: https://classroom.github.com/a/HIzjhCrn
    - Due: Sunday, October 9, 2022 @11:59PM
    - Repo Prefix: 41-echo
 
 1. Name: Kickstart in MIPS
-   - Status: Released
+   - Status: Graded
    - Invitation URL: https://classroom.github.com/a/81i2qleF
-   - Due: Tuesday, Oct 18, 2022 @11:59
+   - Due: Tuesday, Oct 18, 2022 @11:59  (was extended)
    - Repo Prefix: 42-kickstart
 
 1. Name: Binary32
