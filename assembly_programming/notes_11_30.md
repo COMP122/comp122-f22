@@ -27,8 +27,11 @@
    1. M/W M:
       - none 
    1. M/W A:
+      - none
    1. T/R M:
+      - how to get the length of a string...call the strchr subroutine
    1. T/R A:
+      - what's on the test
 
 
 ## Today's Material
@@ -65,6 +68,7 @@
    pop_t_registers
    pop_results $t2
    ```
+
 
 
 ---

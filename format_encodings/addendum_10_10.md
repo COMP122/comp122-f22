@@ -1,3 +1,4 @@
+```mips
                 .include "syscalls.s"
 
 
@@ -51,7 +52,7 @@ jeff:           nop                             # jeff:      ;
 
                 # Return
                 jr $ra
-
+```
 
 
 

@@ -1,4 +1,4 @@
-       ```java
+```java
                   sum = 0;
 
                   length = A.length;
@@ -13,9 +13,9 @@
                   }
            mary:  ;
                   result = sum;
-        ```
+```
 
-       ```C
+```C
                   sum = 0;
 
                   length = A.length;
@@ -32,10 +32,10 @@
                   }
            mary:  ;
                   result = sum;
-        ```
+```
 
 
-      ```mips
+```mips
          # Register allocation
          # t0: sum
          # t1: length
@@ -60,4 +60,4 @@
                               #           }
       mary:                   #    mary:  ;
                               #           result = sum;
-      ```
+```
