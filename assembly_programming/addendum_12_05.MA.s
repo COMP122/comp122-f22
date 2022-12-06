@@ -91,7 +91,7 @@ atoi:   # java: Integer.parseInt(String str);
                                 #          value = value + digit;
                                 #        
                                 #          # next
-        addi $t5, $t5, 1        #          index ++;
+        addi $t5, $t5, 1         #          index ++;
                                 #          ascii_digit = digits[index];
                                 #          continue;
  

@@ -2,7 +2,7 @@
 
 
 ## Announcements
-   1. W/R is the inclass exam for the Assembly Language Section
+   1. W/R is the in-class exam for the Assembly Language Section
       - Will you be required to write code?
         * Yes, in the form of code snippets, e.g., macros
 
@@ -33,6 +33,9 @@
         ```
 
    1. M/W A:
+      - none
+
+
    1. T/R M:
    1. T/R A:
 
