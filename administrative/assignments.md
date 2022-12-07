@@ -154,6 +154,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Status: Released
    - Invitation URL: https://classroom.github.com/a/Kbb7BSRY
    - Due: Tuesday, Nov 22, 2022 @11:59
+     - Provided a one day grace period.
    - Repo Prefix: 43-binary32
 
 1. Name: Character Arrays in Java
