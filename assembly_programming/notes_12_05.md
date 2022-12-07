@@ -31,12 +31,13 @@
 
             .text
         ```
-
    1. M/W A:
       - none
 
-
    1. T/R M:
+      - how do you initialize memory in MIPS
+      - how do you store a value into an array in MIPS
+
    1. T/R A:
 
 
@@ -46,11 +47,11 @@
 
    1. Examples:
       ```cli
-      $ mips_subroutine "123"
+      $ mips_subroutine atoi "123"
       123
       ```
       ```cli
-      $ mips_subroutine "123garbage"
+      $ mips_subroutine atoi "123garbage"
       123
       ```
 
