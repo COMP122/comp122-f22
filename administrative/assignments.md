@@ -167,6 +167,6 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Status: Released
    - Invitation URL: [https://classroom.github.com/a/c7LBSDt_](https://classroom.github.com/a/c7LBSDt_)
    - Due: Sunday, Dec 4 23:59:59 (part 1)
-   - Due: Tuesday, Dec 6, 23:59:59 (part 2 & 3)
+   - Due: Wednesday, Dec 7, 23:59:59 (part 2 & 3)
    - Repo Prefix: 45-strings-mips
  
