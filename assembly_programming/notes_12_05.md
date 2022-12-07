@@ -35,10 +35,13 @@
       - none
 
    1. T/R M:
-      - how do you initialize memory in MIPS
-      - how do you store a value into an array in MIPS
+      - How do you initialize memory in MIPS
+      - How do you store a value into an array in MIPS
 
    1. T/R A:
+      - How do you call a macro?
+      - Length of an array?
+      - How to allocate and initialize an array in MIPS?
 
 
 ## Today's Material
@@ -59,7 +62,7 @@
       - value = value * base + digit 
 
    1. Method Signature:
-      - C: `atoi(const char *str)`
+      - C: `int atoi(const char *str)`
       - Java: `Integer.parseInt(String str)`
 
    1. Steps:
