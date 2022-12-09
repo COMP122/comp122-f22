@@ -93,7 +93,7 @@ atoi: # int atoi(const char *str)
          # t3: digit
          # t4: index
          # t5: ascii_char
-         # t6: 
+         # t6: &str + index
 
          #1. setup
          push_s_registers
