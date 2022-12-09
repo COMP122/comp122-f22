@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+class checksum  
+{  
+
+  public static void main(String args[]) {
+
+    int a=0, b=1;
+
+    /////////////////////////////////////////////////////////////////
+          if ( a == b ) {       
+            ;                          
+          }                      
+    alt:  ;
+    skip: ;                      
+    /////////////////////////////////////////////////////////////////
+
+     if:   if ( a != b ) {           
+     cons:   ;  
+             // <body> 
+
+             // break skip;              
+           }                   
+           else { 
+     alt:     ;                                
+                                 
+             // break skip;              
+           }                  
+     skip: ;                         
+
+    /////////////////////////////////////////////////////////////////
+    loop:   while  (a <= b) {
+              // <body>
+
+              continue loop;
+            }
+
+            // <init>
+    loop:   for(; a <=b ;) {
+              // <body>
+
+              // <next>
+              continue loop; 
+            }
+
+     top:   { nop
+              ;                       
+            } while ( a <= b );       
+  }
+}
+
+x = subroutine(a, b, ...)
+  ==>  marshal(a, b, , ...)
+       call subroutine
+       demarshal(x)
+
+x = A.method(b, c, ...)
+  ==> marshal(A, b, c, ...)
+      call method
+      demarshal(x)
+
+1. Assume infinite number of registers
+1. Write Java Code 
+   2. Transfor the control flow
+   2. write them in a particular style
+1. Be explicity about writing things to memory
+   - Values that are not part of the formal parameters
+   - globals: object, class, or global variables
+
